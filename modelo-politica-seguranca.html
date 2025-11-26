@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Política de Segurança da Informação | Dr. Reginaldo</title>
+    <meta name="description" content="Baixe modelo de Política de Segurança da Informação em Word. Documento jurídico completo para proteção de dados, sistemas e ativos digitais conforme LGPD e boas práticas.">
+    <meta name="keywords" content="modelo política segurança informação, política segurança dados, documento segurança lgpd, política senhas empresa, proteção dados empresarial, advogado nômade">
+    <meta name="author" content="Dr. Reginaldo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.advogadonomade.com.br/modelo-politica-seguranca.html">
+    <meta property="og:title" content="Modelo de Política de Segurança da Informação | Dr. Reginaldo">
+    <meta property="og:description" content="Baixe modelo de Política de Segurança da Informação em Word. Documento jurídico completo para proteção de dados e sistemas empresariais.">
+    <meta property="og:image" content="https://www.advogadonomade.com.br/assets/og-politica-seguranca.jpg">
+    <meta property="og:site_name" content="Dr. Reginaldo - Advogado Nômade">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modelo de Política de Segurança da Informação">
+    <meta name="twitter:description" content="Política de Segurança da Informação completa para download em Word.">
+    <meta name="twitter:image" content="https://www.advogadonomade.com.br/assets/og-politica-seguranca.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.advogadonomade.com.br/modelo-politica-seguranca.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .document-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .document-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .document-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .document-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .document-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .document-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .document-section {
+            margin-bottom: 3rem;
+        }
+
+        .document-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .document-section h2 i {
+            color: var(--gold-color);
+        }
+
+        .document-section h3 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            font-size: 1.3rem;
+        }
+
+        .document-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .document-section ul, .document-section ol {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .document-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 1px solid #ffd43b;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #856404;
+        }
+
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            border: 1px solid var(--gold-color);
+            color: #f7fafc;
+        }
+
+        .warning-box h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+            border: 1px solid #b8daff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #0c5460;
+        }
+
+        [data-theme="dark"] .info-box {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            border: 1px solid var(--gold-color);
+            color: #f7fafc;
+        }
+
+        .document-preview {
+            background: var(--bg-card);
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .document-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        .document-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .document-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .clause {
+            margin-bottom: 2rem;
+        }
+
+        .clause-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .clause-content {
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 3rem;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .download-options {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-button.prev {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-button.next {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
+            text-align: center;
+        }
+
+        .step-box {
+            background: var(--bg-card);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--gold-color);
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            background: var(--gradient);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .document-cta {
+            text-align: center;
+            padding: 3rem;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .security-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .security-area {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .document-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .document-content {
+                padding: 2rem 1rem;
+            }
+
+            .document-preview {
+                padding: 1.5rem;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-button {
+                justify-content: center;
+            }
+
+            .download-options {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .security-areas {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Dr.Reginaldo</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#about" class="nav-link">Sobre</a>
+                <a href="index.html#services" class="nav-link">Serviços</a>
+                <a href="artigos.html" class="nav-link">Artigos</a>
+                <a href="documentos.html" class="nav-link active">Documentos</a>
+                <a href="index.html#contact" class="nav-link">Contato</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de agendar uma consulta urgente." class="cta-button" target="_blank">
+                    <span>Consulta Urgente</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Document Hero -->
+    <section class="document-hero">
+        <div class="container">
+            <div class="document-tags">
+                <span class="document-tag">LGPD</span>
+                <span class="document-tag">Compliance</span>
+                <span class="document-tag">Word</span>
+            </div>
+            <h1>Política de Segurança da Informação</h1>
+            <div class="document-meta">
+                <div class="meta-item">
+                    <i class="far fa-calendar"></i>
+                    <span>Atualizado: 12 de Dezembro de 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-file-word"></i>
+                    <span>Formato: Word (.docx)</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-clock"></i>
+                    <span>Download Imediato</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Content -->
+    <main class="document-content">
+        <div class="document-section">
+            <h2><i class="fas fa-info-circle"></i> Sobre Este Documento</h2>
+            <p>Esta <strong>Política de Segurança da Informação</strong> é um documento jurídico essencial para empresas que buscam proteger seus ativos digitais, dados e sistemas. Desenvolvida em conformidade com a LGPD e boas práticas de segurança, estabelece diretrizes claras para a proteção da informação corporativa.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-check-circle"></i> Conforme LGPD e Boas Práticas</h4>
+                <p>Este modelo atende aos requisitos de segurança da Lei Geral de Proteção de Dados e incorpora as melhores práticas internacionais de segurança da informação, incluindo controles técnicos e organizacionais.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4><i class="fas fa-shield-alt"></i> Proteção de Dados</h4>
+                    <p>Diretrizes para proteção de dados pessoais e corporativos</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="fas fa-user-lock"></i> Controles de Acesso</h4>
+                    <p>Políticas de senhas, autenticação e privilégios de usuário</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="fas fa-file-word"></i> Formato Word</h4>
+                    <p>Baixe e edite diretamente no Microsoft Word ou similar</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="fas fa-network-wired"></i> Segurança de Rede</h4>
+                    <p>Diretrizes para proteção de infraestrutura de TI</p>
+                </div>
+            </div>
+
+            <h3>Áreas de Segurança Abrangidas</h3>
+            <div class="security-areas">
+                <div class="security-area">
+                    <i class="fas fa-key"></i>
+                    <h4>Controle de Acesso</h4>
+                </div>
+                <div class="security-area">
+                    <i class="fas fa-lock"></i>
+                    <h4>Proteção de Dados</h4>
+                </div>
+                <div class="security-area">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>Segurança de Rede</h4>
+                </div>
+                <div class="security-area">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Gestão de Usuários</h4>
+                </div>
+                <div class="security-area">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Dispositivos Móveis</h4>
+                </div>
+                <div class="security-area">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h4>Resposta a Incidentes</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="document-section">
+            <h2><i class="fas fa-eye"></i> Prévia do Documento</h2>
+            
+            <div class="document-preview">
+                <div class="document-header">
+                    <div class="document-title">POLÍTICA DE SEGURANÇA DA INFORMAÇÃO</div>
+                    <div class="document-subtitle"><strong>[NOME DA EMPRESA]</strong> - CNPJ: <strong>[CNPJ]</strong></div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">1. OBJETIVO</div>
+                    <div class="clause-content">
+                        <p>Estabelecer diretrizes e normas para a proteção dos ativos de informação da <strong>[NOME DA EMPRESA]</strong>, garantindo a confidencialidade, integridade e disponibilidade das informações, em conformidade com a legislação aplicável, especialmente a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">2. ÂMBITO DE APLICAÇÃO</div>
+                    <div class="clause-content">
+                        <p>Esta política aplica-se a todos os colaboradores, estagiários, terceiros e prestadores de serviços que tenham acesso aos sistemas, dados e informações da empresa, independentemente do local ou meio de acesso.</p>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">3. CLASSIFICAÇÃO DA INFORMAÇÃO</div>
+                    <div class="clause-content">
+                        <p>As informações serão classificadas nos seguintes níveis:</p>
+                        <ul>
+                            <li><strong>Pública:</strong> Informações que podem ser divulgadas livremente</li>
+                            <li><strong>Interna:</strong> Informações restritas ao uso interno da empresa</li>
+                            <li><strong>Confidencial:</strong> Informações que exigem proteção especial</li>
+                            <li><strong>Restrita:</strong> Informações críticas com acesso extremamente limitado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">4. CONTROLES DE ACESSO</div>
+                    <div class="clause-content">
+                        <p>4.1. <strong>Política de Senhas:</strong></p>
+                        <ul>
+                            <li>Mínimo de 8 caracteres</li>
+                            <li>Combinação de letras maiúsculas, minúsculas, números e símbolos</li>
+                            <li>Troca obrigatória a cada 90 dias</li>
+                            <li>Proibição de reutilização das últimas 5 senhas</li>
+                        </ul>
+                        
+                        <p>4.2. <strong>Privilégios de Acesso:</strong></p>
+                        <ul>
+                            <li>Princípio do menor privilégio</li>
+                            <li>Revisão trimestral de acessos</li>
+                            <li>Desativação imediata de contas de colaboradores desligados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">5. PROTEÇÃO DE DADOS PESSOAIS</div>
+                    <div class="clause-content">
+                        <p>Em conformidade com a LGPD, a empresa implementará:</p>
+                        <ul>
+                            <li>Criptografia de dados sensíveis</li>
+                            <li>Controle de acesso baseado em função</li>
+                            <li>Registro de atividades de tratamento</li>
+                            <li>Procedimentos para exercício de direitos dos titulares</li>
+                            <li>Gestão de consentimentos quando aplicável</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">6. SEGURANÇA FÍSICA</div>
+                    <div class="clause-content">
+                        <p>6.1. <strong>Controles de Acesso Físico:</strong></p>
+                        <ul>
+                            <li>Controle de acesso a salas de servidores</li>
+                            <li>Uso de crachás de identificação</li>
+                            <li>Registro de visitantes</li>
+                            <li>Monitoramento por câmeras</li>
+                        </ul>
+                        
+                        <p>6.2. <strong>Proteção de Equipamentos:</strong></p>
+                        <ul>
+                            <li>Bloqueio de estações de trabalho quando ausentes</li>
+                            <li>Proibição de dispositivos de armazenamento não autorizados</li>
+                            <li>Destruição segura de mídias</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">7. SEGURANÇA DE REDE</div>
+                    <div class="clause-content">
+                        <p>7.1. <strong>Controles de Rede:</strong></p>
+                        <ul>
+                            <li>Firewalls configurados e monitorados</li>
+                            <li>Segmentação de rede</li>
+                            <li>Atualizações regulares de sistemas</li>
+                            <li>Antivírus corporativo</li>
+                        </ul>
+                        
+                        <p>7.2. <strong>Acesso Remoto:</strong></p>
+                        <ul>
+                            <li>Uso obrigatório de VPN</li>
+                            <li>Autenticação multifator</li>
+                            <li>Limitação de horários de acesso</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">8. DISPOSITIVOS MÓVEIS</div>
+                    <div class="clause-content">
+                        <p>8.1. <strong>Política BYOD (Bring Your Own Device):</strong></p>
+                        <ul>
+                            <li>Cadastro obrigatório de dispositivos</li>
+                            <li>Senha de desbloqueio obrigatória</li>
+                            <li>Criptografia de dados</li>
+                            <li>Capacidade de apagar dados remotamente</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">9. GESTÃO DE INCIDENTES</div>
+                    <div class="clause-content">
+                        <p>9.1. <strong>Procedimento de Resposta:</strong></p>
+                        <ul>
+                            <li>Identificação e contenção imediata</li>
+                            <li>Análise de causa raiz</li>
+                            <li>Comunicação às partes interessadas</li>
+                            <li>Notificação à ANPD quando aplicável</li>
+                        </ul>
+                        
+                        <p>9.2. <strong>Registro de Incidentes:</strong></p>
+                        <ul>
+                            <li>Manutenção de log de incidentes</li>
+                            <li>Análise pós-incidente</li>
+                            <li>Implementação de medidas corretivas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">10. TREINAMENTO E CONSCIENTIZAÇÃO</div>
+                    <div class="clause-content">
+                        <p>10.1. <strong>Programa de Conscientização:</strong></p>
+                        <ul>
+                            <li>Treinamento anual obrigatório</li>
+                            <li>Simulações de phishing</li>
+                            <li>Comunicação regular sobre boas práticas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">11. CONFORMIDADE E AUDITORIA</div>
+                    <div class="clause-content">
+                        <p>11.1. <strong>Monitoramento:</strong></p>
+                        <ul>
+                            <li>Auditorias regulares de segurança</li>
+                            <li>Revisão anual desta política</li>
+                            <li>Avaliação contínua de riscos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clause">
+                    <div class="clause-title">12. SANÇÕES</div>
+                    <div class="clause-content">
+                        <p>O descumprimento desta política sujeitará o infrator às medidas disciplinares previstas no regulamento interno da empresa, podendo incluir desde advertência verbal até desligamento por justa causa, sem prejuízo de outras medidas legais cabíveis.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <p>Documento aprovado em <strong>[DATA]</strong> - <strong>[NOME DA EMPRESA]</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="document-section">
+            <h2><i class="fas fa-download"></i> Download do Documento</h2>
+            
+            <div class="download-section">
+                <h3>Baixe o Modelo Completo em Word</h3>
+                <p>Clique no botão abaixo para fazer o download da Política de Segurança da Informação completa em formato editável (.docx)</p>
+                
+                <div class="download-options">
+                    <a href="/documents/politica-seguranca-informacao.docx" class="download-btn" download>
+                        <i class="far fa-file-word"></i>
+                        <span>Baixar em Word</span>
+                    </a>
+                </div>
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <i class="fas fa-lock"></i> Download seguro e instantâneo
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Aviso Importante</h4>
+                <p>Esta é uma política de segurança genérica. É fundamental adaptar o documento às características específicas da sua empresa, considerando tamanho, setor de atuação, tipos de dados tratados e infraestrutura tecnológica. Recomenda-se consultar um especialista em segurança da informação para implementação adequada.</p>
+            </div>
+        </div>
+
+        <div class="document-section">
+            <h2><i class="fas fa-question-circle"></i> Como Implementar Esta Política</h2>
+            
+            <div class="step-box">
+                <div class="step-number">1</div>
+                <h3>Personalize o Documento</h3>
+                <p>Adapte a política à realidade da sua empresa, setor e infraestrutura tecnológica</p>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">2</div>
+                <h3>Comunique e Treine</h3>
+                <p>Apresente a política a todos os colaboradores e forneça treinamento adequado</p>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">3</div>
+                <h3>Implemente Controles</h3>
+                <p>Estabeleça os controles técnicos e organizacionais necessários</p>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">4</div>
+                <h3>Monitore e Melhore</h3>
+                <p>Realize auditorias regulares e atualize a política conforme necessário</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="document-cta">
+            <h2>Precisa de um Programa Completo de Segurança?</h2>
+            <p>A política de segurança é apenas o primeiro passo para um programa robusto de proteção de dados</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="index.html#contact" class="btn btn-primary">
+                    <span>Consultoria em Segurança da Informação</span>
+                    <i class="fas fa-building"></i>
+                </a>
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de ajuda com implementação de política de segurança da informação." class="btn btn-secondary" target="_blank">
+                    <span>WhatsApp para Segurança</span>
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation-buttons">
+            <a href="modelo-contrato-servicos-digitais.html" class="nav-button prev">
+                <i class="fas fa-arrow-left"></i>
+                <span>Modelo Anterior</span>
+            </a>
+            <a href="modelo-contrato-social-ltda.html" class="nav-button next">
+                <span>Próximo Modelo</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Dr.Reginaldo</span>
+                    </div>
+                    <p>Excelência em advocacia empresarial estratégica</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navegação</h4>
+                        <a href="index.html">Início</a>
+                        <a href="index.html#about">Sobre</a>
+                        <a href="index.html#services">Serviços</a>
+                        <a href="artigos.html">Artigos</a>
+                        <a href="documentos.html">Documentos</a>
+                        <a href="index.html#contact">Contato</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="politica-privacidade.html">Política de Privacidade</a>
+                        <a href="termos-uso.html">Termos de Uso</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Contato</h4>
+                        <a href="tel:+5571996510966">(71) 99651-0966</a>
+                        <a href="mailto:contato@advogadonomade.com.br">contato@advogadonomade.com.br</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Reginaldo - Advogado. Todos os direitos reservados.</p>
+                <p>OAB/SC 57.879</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5571996510966?text=Olá! Baixei o modelo de política de segurança da informação e gostaria de tirar uma dúvida sobre proteção de dados." class="whatsapp-float" target="_blank" title="Dúvidas sobre Segurança da Informação">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
