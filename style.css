@@ -125,13 +125,13 @@ body {
     transition: var(--transition);
 }
 
-/* ===== THEME TOGGLE - POSIÇÃO CORRIGIDA ===== */
+/* ===== THEME TOGGLE - POSIÇÃO DEFINITIVAMENTE CORRIGIDA ===== */
 .theme-toggle {
     position: fixed;
-    top: 1.8rem;
-    right: 12rem; /* POSIÇÃO CORRIGIDA - não sobrepõe mais o botão */
-    width: 45px;
-    height: 45px;
+    top: 6rem; /* POSIÇÃO BAIXADA - não sobrepõe mais o botão */
+    right: 2rem;
+    width: 50px;
+    height: 50px;
     background: var(--bg-card);
     border-radius: 50%;
     display: flex;
@@ -149,7 +149,7 @@ body {
 }
 
 .theme-toggle i {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--gold-color);
     transition: var(--transition);
 }
@@ -1110,7 +1110,7 @@ section {
     }
 
     .theme-toggle {
-        right: 10rem; /* Ajustado para tablet */
+        top: 5rem; /* Ajustado para tablet */
     }
 }
 
@@ -1203,8 +1203,8 @@ section {
     }
 
     .theme-toggle {
-        top: 1.5rem;
-        right: 1.5rem; /* Posição móvel corrigida */
+        top: 5rem; /* Posição móvel corrigida - BAIXADA */
+        right: 1.5rem;
         width: 45px;
         height: 45px;
     }
@@ -1247,8 +1247,8 @@ section {
     }
 
     .theme-toggle {
-        top: 1.2rem;
-        right: 1.2rem;
+        top: 4.5rem; /* Ainda mais baixo no mobile muito pequeno */
+        right: 1rem;
         width: 40px;
         height: 40px;
     }
