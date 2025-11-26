@@ -4,16 +4,21 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /cgi-bin/
 
-# Sitemap location
+# Sitemap location (ATUALIZADA)
 Sitemap: https://www.advogadonomade.com.br/sitemap.xml
 
-# Crawl delay (opcional)
+# Crawl delay
 Crawl-delay: 1
 
 # Allow important bots
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: Googlebot-News
+Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
@@ -22,3 +27,13 @@ Disallow: /admin/
 User-agent: Slurp
 Allow: /
 Disallow: /admin/
+
+# Block AI training bots
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
