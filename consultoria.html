@@ -6,10 +6,34 @@
     <title>Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade</title>
     <meta name="description" content="Consultoria jurídica estratégica para negócios digitais. Pacotes personalizados com resultados garantidos. Atendimento em todo Brasil.">
     
-    <!-- Meta tags e estilos existentes -->
+    <!-- Meta tags existentes -->
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.advogadonomade.com.br/consultoria.html">
+    <meta property="og:title" content="Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade">
+    <meta property="og:description" content="Consultoria jurídica estratégica para negócios em transformação digital. Resultados em 30 dias ou devolução do investimento.">
+    <meta property="og:image" content="https://www.advogadonomade.com.br/assets/consultoria-og.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Consultoria Jurídica Estratégica">
+    <meta name="twitter:description" content="Soluções jurídicas ágeis para empresas que não podem esperar.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.advogadonomade.com.br/consultoria.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,10 +49,12 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <div class="logo">
-                    <i class="fas fa-balance-scale"></i>
-                    <span>Dr.Reginaldo</span>
-                </div>
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Dr.Reginaldo</span>
+                    </div>
+                </a>
             </div>
             
             <div class="nav-menu" id="navMenu">
@@ -451,10 +477,81 @@
     <style>
         /* Estilos específicos para a página de consultoria */
         .consultoria-hero {
-            padding: 120px 0 80px;
+            padding: 140px 0 80px;
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .consultoria-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.05)"><polygon points="0,0 1000,50 1000,100 0,100"/></svg>') no-repeat center bottom;
+            background-size: cover;
+        }
+
+        .consultoria-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .consultoria-hero .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .consultoria-hero .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .consultoria-hero .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .consultoria-hero .stat {
+            text-align: center;
+        }
+
+        .consultoria-hero .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gold-color);
+        }
+
+        .consultoria-hero .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .consultoria-hero .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .problemas-section {
+            padding: 100px 0;
+            background: var(--bg-secondary);
         }
 
         .problemas-grid {
@@ -465,202 +562,419 @@
         }
 
         .problema-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problema-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
         }
 
         .problema-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .problema-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .problema-card h3 {
+            color: var(--text-primary);
             margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .problema-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
         }
 
         .solucao-tag {
-            background: var(--success-color);
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.7rem 1.5rem;
             border-radius: 25px;
             font-size: 0.9rem;
-            margin-top: 1rem;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            font-weight: 600;
+        }
+
+        .pacotes-section {
+            padding: 100px 0;
+            background: var(--bg-primary);
         }
 
         .pacotes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
         .pacote-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--bg-card);
+            border-radius: 25px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
             position: relative;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
         }
 
         .pacote-card.featured {
             transform: scale(1.05);
-            border: 2px solid var(--primary-color);
+            border: 2px solid var(--gold-color);
+            box-shadow: 0 20px 40px rgba(233, 69, 96, 0.2);
         }
 
         .pacote-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .pacote-card.featured:hover {
-            transform: scale(1.05) translateY(-5px);
+            transform: scale(1.05) translateY(-10px);
         }
 
         .destaque-badge {
             position: absolute;
-            top: -10px;
+            top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--gold-color) 0%, #ff9f43 100%);
             color: white;
-            padding: 0.5rem 1.5rem;
+            padding: 0.7rem 2rem;
             border-radius: 25px;
             font-size: 0.9rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
         }
 
         .pacote-header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .pacote-header h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
         }
 
         .preco {
-            margin: 1rem 0;
+            margin: 1.5rem 0;
         }
 
         .valor {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 3rem;
+            font-weight: 800;
             color: var(--primary-color);
+            display: block;
+            line-height: 1;
         }
 
         .periodo {
-            color: #666;
-            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .pacote-header p {
+            color: var(--text-secondary);
+            font-style: italic;
         }
 
         .pacote-beneficios {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
         }
 
         .beneficio {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 1rem;
-            color: #333;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+            line-height: 1.5;
         }
 
         .beneficio i {
-            color: var(--success-color);
+            color: #27ae60;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .pacote-cta {
+            margin-top: auto;
+        }
+
+        .garantia-section {
+            margin-top: 5rem;
         }
 
         .garantia-card {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
             padding: 3rem;
-            border-radius: 20px;
+            border-radius: 25px;
             display: flex;
             align-items: center;
-            gap: 2rem;
-            margin-top: 4rem;
+            gap: 2.5rem;
+            box-shadow: 0 15px 35px rgba(233, 69, 96, 0.2);
         }
 
         .garantia-card i {
-            font-size: 3rem;
+            font-size: 4rem;
+            opacity: 0.9;
+        }
+
+        .garantia-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .garantia-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .processo-section {
+            padding: 100px 0;
+            background: var(--bg-secondary);
         }
 
         .processo-timeline {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 3rem;
+            position: relative;
+        }
+
+        .processo-timeline::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            right: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
+            z-index: 1;
         }
 
         .processo-item {
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
+            background: var(--bg-card);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .processo-item:hover {
+            transform: translateY(-5px);
         }
 
         .processo-number {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-color);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 25px rgba(233, 69, 96, 0.3);
+        }
+
+        .processo-content h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .processo-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
 
         .cta-final {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.05)"><polygon points="0,100 1000,50 1000,0 0,0"/></svg>') no-repeat center top;
+            background-size: cover;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .cta-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
         }
 
         .cta-actions {
-            margin-top: 2rem;
+            margin-top: 2.5rem;
         }
 
         .btn-large {
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .cta-info {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 3rem;
+            margin-top: 2.5rem;
             flex-wrap: wrap;
         }
 
         .info-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            color: #ccc;
+            gap: 0.8rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
         }
 
+        .info-item i {
+            color: var(--gold-color);
+        }
+
+        /* Responsividade */
         @media (max-width: 768px) {
+            .consultoria-hero {
+                padding: 120px 0 60px;
+            }
+
+            .consultoria-hero .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .consultoria-hero .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .consultoria-hero .hero-stats {
+                gap: 2rem;
+            }
+
+            .consultoria-hero .stat-number {
+                font-size: 2rem;
+            }
+
             .pacote-card.featured {
                 transform: none;
             }
             
             .pacote-card.featured:hover {
-                transform: translateY(-5px);
+                transform: translateY(-10px);
             }
             
             .garantia-card {
                 flex-direction: column;
                 text-align: center;
+                padding: 2rem;
+            }
+
+            .processo-timeline::before {
+                display: none;
+            }
+
+            .cta-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .cta-content p {
+                font-size: 1.1rem;
+            }
+
+            .cta-info {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .consultoria-hero .hero-title {
+                font-size: 2rem;
+            }
+
+            .consultoria-hero .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pacotes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .processo-timeline {
+                grid-template-columns: 1fr;
             }
         }
     </style>
