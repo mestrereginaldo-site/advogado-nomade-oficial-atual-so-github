@@ -4,6 +4,8 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
+    <!-- ===== PÁGINAS PRINCIPAIS ===== -->
+    
     <!-- Página Principal - Prioridade Máxima -->
     <url>
         <loc>https://www.advogadonomade.com.br/</loc>
@@ -16,33 +18,81 @@
     <url>
         <loc>https://www.advogadonomade.com.br/artigos.html</loc>
         <lastmod>2025-11-26</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     
-    <!-- Artigos Específicos - Alta Prioridade -->
+    <!-- ===== ARTIGOS - ALTA PRIORIDADE ===== -->
+    
+    <!-- Artigo 1: LGPD para PMEs -->
     <url>
         <loc>https://www.advogadonomade.com.br/artigo-lgpd.html</loc>
-        <lastmod>2025-11-26</lastmod>
+        <lastmod>2025-11-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
+    <!-- Artigo 2: Direito Digital Empresarial -->
     <url>
         <loc>https://www.advogadonomade.com.br/artigo-direito-digital.html</loc>
-        <lastmod>2025-11-26</lastmod>
+        <lastmod>2025-11-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
+    <!-- Artigo 3: Advogado Nômade -->
     <url>
         <loc>https://www.advogadonomade.com.br/artigo-advogado-nomade.html</loc>
-        <lastmod>2025-11-26</lastmod>
+        <lastmod>2025-11-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
-    <!-- Páginas Legais -->
+    <!-- Artigo 4: Como Escolher Advogado Empresarial -->
+    <url>
+        <loc>https://www.advogadonomade.com.br/artigo-escolher-advogado.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Artigo 5: Proteção Digital Empresarial -->
+    <url>
+        <loc>https://www.advogadonomade.com.br/artigo-direito-digital-protecao.html</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Artigo 6: Compliance Digital para PMEs -->
+    <url>
+        <loc>https://www.advogadonomade.com.br/artigo-compliance-digital-pmes.html</loc>
+        <lastmod>2025-12-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ===== PRÓXIMOS ARTIGOS (PLANEJADOS) ===== -->
+    
+    <!-- Artigo 7: Contratos Inteligentes (Futuro) -->
+    <url>
+        <loc>https://www.advogadonomade.com.br/artigo-contratos-inteligentes.html</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Artigo 8: Transformação Digital Jurídica (Futuro) -->
+    <url>
+        <loc>https://www.advogadonomade.com.br/artigo-transformacao-digital.html</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ===== PÁGINAS LEGAIS ===== -->
+    
+    <!-- Política de Privacidade -->
     <url>
         <loc>https://www.advogadonomade.com.br/politica-privacidade.html</loc>
         <lastmod>2024-11-20</lastmod>
@@ -50,6 +100,7 @@
         <priority>0.3</priority>
     </url>
     
+    <!-- Termos de Uso -->
     <url>
         <loc>https://www.advogadonomade.com.br/termos-uso.html</loc>
         <lastmod>2024-11-20</lastmod>
