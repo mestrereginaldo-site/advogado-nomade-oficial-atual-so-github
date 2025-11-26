@@ -1,28 +1,35 @@
-// ===== GERENCIAMENTO DE CARREGAMENTO =====
+// ===== GERENCIAMENTO DE CARREGAMENTO - CORRIGIDO =====
 document.addEventListener('DOMContentLoaded', function() {
-    // Remove a tela de carregamento
+    console.log('DOM Carregado - Iniciando site...');
+    
+    // Remove a tela de carregamento IMEDIATAMENTE
     const loadingScreen = document.querySelector('.loading-screen');
     if (loadingScreen) {
-        // Adiciona uma transição de saída
-        loadingScreen.style.opacity = '0';
         setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 500); // Tempo igual à transição no CSS (0.5s)
+            loadingScreen.classList.add('hidden');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                console.log('Loading screen removida');
+            }, 500);
+        }, 1000);
     }
 
     // Inicializa todas as funcionalidades
     initializeThemeToggle();
-    initializeParticles();
     initializeNavigation();
     initializeScrollAnimations();
     initializeCounters();
     initializeContactForm();
-    initializeTypewriter();
+    
+    // Inicializa partículas APÓS o carregamento
+    setTimeout(initializeParticles, 2000);
 });
 
 // ===== TOGGLE DE TEMA =====
 function initializeThemeToggle() {
     const themeToggle = document.querySelector('.theme-toggle');
+    if (!themeToggle) return;
+    
     const themeIcon = themeToggle.querySelector('i');
     
     // Verifica o tema salvo no localStorage
@@ -48,75 +55,139 @@ function updateThemeIcon(icon, theme) {
     }
 }
 
-// ===== PARTÍCULAS BACKGROUND =====
+// ===== PARTÍCULAS BACKGROUND - CORRIGIDO =====
 function initializeParticles() {
+    console.log('Inicializando partículas...');
+    
     if (typeof particlesJS !== 'undefined') {
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#e94560" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#e94560",
-                    opacity: 0.4,
-                    width: 1
+        try {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { 
+                        value: 60, 
+                        density: { 
+                            enable: true, 
+                            value_area: 800 
+                        } 
+                    },
+                    color: { 
+                        value: "#e94560" 
+                    },
+                    shape: { 
+                        type: "circle" 
+                    },
+                    opacity: { 
+                        value: 0.3, 
+                        random: true 
+                    },
+                    size: { 
+                        value: 3, 
+                        random: true 
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#e94560",
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 1,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false
+                    }
                 },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "repulse" },
-                    onclick: { enable: true, mode: "push" },
-                    resize: true
-                }
-            },
-            retina_detect: true
-        });
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { 
+                            enable: true, 
+                            mode: "repulse" 
+                        },
+                        onclick: { 
+                            enable: true, 
+                            mode: "push" 
+                        },
+                        resize: true
+                    }
+                },
+                retina_detect: true
+            });
+            console.log('Partículas inicializadas com sucesso!');
+        } catch (error) {
+            console.error('Erro ao inicializar partículas:', error);
+        }
+    } else {
+        console.warn('ParticlesJS não carregado - continuando sem partículas');
     }
 }
 
-// ===== NAVEGAÇÃO MOBILE =====
+// ===== NAVEGAÇÃO MOBILE - CORRIGIDA =====
 function initializeNavigation() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    if (hamburger) {
+    if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            
+            // Previne scroll quando menu está aberto
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
     }
 
+    // Fecha menu ao clicar em um link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Fecha menu ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (navMenu && hamburger && 
+            !navMenu.contains(e.target) && 
+            !hamburger.contains(e.target) &&
+            navMenu.classList.contains('active')) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
-        });
+            document.body.style.overflow = '';
+        }
     });
 
     // Header scroll effect
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = 'none';
+        if (header) {
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                
+                if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                    header.style.background = 'rgba(15, 20, 25, 0.98)';
+                }
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+                
+                if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                    header.style.background = 'rgba(15, 20, 25, 0.95)';
+                }
+            }
         }
     });
 }
@@ -137,8 +208,11 @@ function initializeScrollAnimations() {
     }, observerOptions);
 
     // Observar elementos para animação
-    const animateElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-    animateElements.forEach(el => observer.observe(el));
+    const animateElements = document.querySelectorAll('.service-card, .about-content, .contact-content, .timeline-item, .feature-item');
+    animateElements.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
 }
 
 // ===== CONTADORES ANIMADOS =====
@@ -197,56 +271,21 @@ function initializeContactForm() {
     }
 }
 
-// ===== EFEITO DE MÁQUINA DE ESCREVER =====
-function initializeTypewriter() {
-    const elements = document.querySelectorAll('.typewriter');
-    elements.forEach(el => {
-        const text = el.getAttribute('data-text');
-        let i = 0;
-        const speed = 50; // Velocidade em milissegundos
+// ===== FUNÇÃO DE FALLBACK - GARANTIA =====
+window.addEventListener('load', function() {
+    console.log('Página totalmente carregada - Garantindo que loading seja removido');
+    
+    const loadingScreen = document.querySelector('.loading-screen');
+    if (loadingScreen) {
+        loadingScreen.style.display = 'none';
+    }
+});
 
-        function typeWriter() {
-            if (i < text.length) {
-                el.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-
-        // Inicia o efeito quando o elemento estiver visível
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    el.innerHTML = ''; // Limpa o conteúdo
-                    typeWriter();
-                    observer.unobserve(el);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(el);
-    });
-}
-
-// ===== VOLTAR AO TOPO =====
-function initializeBackToTop() {
-    const backToTop = document.createElement('button');
-    backToTop.innerHTML = '<i class="fas fa-chevron-up"></i>';
-    backToTop.className = 'back-to-top';
-    document.body.appendChild(backToTop);
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            backToTop.classList.add('show');
-        } else {
-            backToTop.classList.remove('show');
-        }
-    });
-
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-
-// Chama a função de voltar ao topo
-initializeBackToTop();
+// Fallback final - remove loading após 5 segundos NO MÁXIMO
+setTimeout(() => {
+    const loadingScreen = document.querySelector('.loading-screen');
+    if (loadingScreen) {
+        loadingScreen.style.display = 'none';
+        console.log('Fallback: Loading screen removida por timeout');
+    }
+}, 5000);
