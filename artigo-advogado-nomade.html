@@ -20,7 +20,7 @@
     
     <style>
         .article-hero {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
             color: white;
             padding: 8rem 2rem 4rem;
             text-align: center;
@@ -57,8 +57,8 @@
         }
 
         .article-tag {
-            background: rgba(46, 204, 113, 0.2);
-            color: #2ecc71;
+            background: rgba(233, 69, 96, 0.2);
+            color: var(--gold-color);
             padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -85,7 +85,7 @@
         }
 
         .article-section h2 i {
-            color: #27ae60;
+            color: var(--gold-color);
         }
 
         .article-section h3 {
@@ -123,7 +123,7 @@
 
         [data-theme="dark"] .warning-box {
             background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-            border: 1px solid #e94560;
+            border: 1px solid var(--gold-color);
             color: #f7fafc;
         }
 
@@ -145,7 +145,7 @@
 
         [data-theme="dark"] .info-box {
             background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-            border: 1px solid #4299e1;
+            border: 1px solid var(--gold-color);
             color: #f7fafc;
         }
 
@@ -154,12 +154,12 @@
             border-radius: 15px;
             padding: 2rem;
             margin: 2rem 0;
-            border-left: 4px solid #27ae60;
+            border-left: 4px solid var(--gold-color);
             box-shadow: var(--shadow);
         }
 
         .step-number {
-            background: #27ae60;
+            background: var(--gradient);
             color: white;
             width: 40px;
             height: 40px;
@@ -237,7 +237,7 @@
 
         .benefit-icon {
             font-size: 2.5rem;
-            color: #27ae60;
+            color: var(--gold-color);
             margin-bottom: 1rem;
         }
 
@@ -269,7 +269,7 @@
         }
 
         .check {
-            color: #27ae60;
+            color: var(--gold-color);
             font-weight: bold;
         }
 
@@ -377,6 +377,8 @@
         </div>
     </section>
 
+    <!-- Resto do conteúdo do artigo permanece igual -->
+    <!-- ... -->
     <!-- Article Content -->
     <main class="article-content">
         <div class="article-section">
