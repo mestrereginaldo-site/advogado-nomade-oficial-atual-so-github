@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Documentos Jurídicos - Dr. Reginaldo | Contratos e Formulários Prontos</title>
+    <meta name="description" content="Baixe modelos de documentos jurídicos prontos: contratos, termos, políticas e formulários. Dr. Reginaldo - Advogado Nômade especializado em Direito Empresarial.">
+    <meta name="keywords" content="modelos contratos, documentos jurídicos, contratos prontos, termos legais, formulários jurídicos, advogado nômade, direito empresarial">
+    <meta name="author" content="Dr. Reginaldo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.advogadonomade.com.br/documentos.html">
+    <meta property="og:title" content="Modelos de Documentos Jurídicos - Dr. Reginaldo | Contratos e Formulários Prontos">
+    <meta property="og:description" content="Baixe modelos de documentos jurídicos prontos para uso empresarial: contratos, termos, políticas e formulários.">
+    <meta property="og:image" content="https://www.advogadonomade.com.br/assets/og-documentos.jpg">
+    <meta property="og:site_name" content="Dr. Reginaldo - Advogado Nômade">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modelos de Documentos Jurídicos - Dr. Reginaldo">
+    <meta name="twitter:description" content="Contratos, termos e formulários jurídicos prontos para download.">
+    <meta name="twitter:image" content="https://www.advogadonomade.com.br/assets/og-documentos.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.advogadonomade.com.br/documentos.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .documents-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .documents-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .documents-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .documents-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .document-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .document-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .document-card-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .document-card-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .document-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+
+        .document-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .document-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .document-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .document-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .document-tag {
+            background: rgba(233, 69, 96, 0.1);
+            color: var(--gold-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .download-document {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+
+        .download-document:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+            gap: 1rem;
+        }
+
+        .documents-cta {
+            text-align: center;
+            padding: 3rem;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            margin-top: 4rem;
+        }
+
+        .documents-cta h2 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .documents-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn.active {
+            background: var(--gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .documents-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .documents-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .documents-container {
+                padding: 2rem 1rem;
+            }
+
+            .documents-filters {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Dr.Reginaldo</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#about" class="nav-link">Sobre</a>
+                <a href="index.html#services" class="nav-link">Serviços</a>
+                <a href="artigos.html" class="nav-link">Artigos</a>
+                <a href="documentos.html" class="nav-link active">Documentos</a>
+                <a href="index.html#contact" class="nav-link">Contato</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de agendar uma consulta urgente." class="cta-button" target="_blank">
+                    <span>Consulta Urgente</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="documents-hero">
+        <div class="container">
+            <h1>Modelos de Documentos Jurídicos</h1>
+            <p>Contratos, termos, políticas e formulários prontos para download. Conteúdo jurídico atualizado e personalizável para seu negócio.</p>
+        </div>
+    </section>
+
+    <!-- Documents Grid -->
+    <section class="documents-container">
+        <div class="documents-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="contratos">Contratos</button>
+            <button class="filter-btn" data-filter="lgpd">LGPD</button>
+            <button class="filter-btn" data-filter="empresarial">Empresarial</button>
+            <button class="filter-btn" data-filter="digital">Digital</button>
+            <button class="filter-btn" data-filter="trabalhista">Trabalhista</button>
+        </div>
+
+        <div class="documents-grid">
+            <!-- Documento 1 -->
+            <article class="document-card" data-category="contratos empresarial">
+                <div class="document-card-image">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <div class="document-card-content">
+                    <div class="document-tags">
+                        <span class="document-tag">Contratos</span>
+                        <span class="document-tag">Empresarial</span>
+                    </div>
+                    <h3>Contrato de Prestação de Serviços</h3>
+                    <div class="document-meta">
+                        <span><i class="far fa-calendar"></i> Atualizado: 12/2025</span>
+                        <span><i class="far fa-file-word"></i> Word (.docx)</span>
+                    </div>
+                    <p>Modelo completo de contrato de prestação de serviços profissionais. Inclui cláusulas de confidencialidade, propriedade intelectual e rescisão.</p>
+                    <a href="modelo-contrato-prestacao-servicos.html" class="download-document">
+                        <span>Ver Modelo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Documento 2 -->
+            <article class="document-card" data-category="lgpd digital">
+                <div class="document-card-image">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="document-card-content">
+                    <div class="document-tags">
+                        <span class="document-tag">LGPD</span>
+                        <span class="document-tag">Digital</span>
+                    </div>
+                    <h3>Política de Privacidade - Site/E-commerce</h3>
+                    <div class="document-meta">
+                        <span><i class="far fa-calendar"></i> Atualizado: 12/2025</span>
+                        <span><i class="far fa-file-word"></i> Word (.docx)</span>
+                    </div>
+                    <p>Política de privacidade completa para sites e e-commerce, em conformidade com a LGPD. Inclui coleta de cookies, dados de usuários e direitos.</p>
+                    <a href="modelo-politica-privacidade.html" class="download-document">
+                        <span>Ver Modelo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Documento 3 -->
+            <article class="document-card" data-category="contratos trabalhista">
+                <div class="document-card-image">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="document-card-content">
+                    <div class="document-tags">
+                        <span class="document-tag">Contratos</span>
+                        <span class="document-tag">Trabalhista</span>
+                    </div>
+                    <h3>Contrato de Trabalho - PJ (Pessoa Jurídica)</h3>
+                    <div class="document-meta">
+                        <span><i class="far fa-calendar"></i> Atualizado: 11/2025</span>
+                        <span><i class="far fa-file-word"></i> Word (.docx)</span>
+                    </div>
+                    <p>Contrato de prestação de serviços por pessoa jurídica, com cláusulas de exclusividade, confidencialidade e propriedade intelectual.</p>
+                    <a href="modelo-contrato-trabalho-pj.html" class="download-document">
+                        <span>Ver Modelo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Documento 4 -->
+            <article class="document-card" data-category="lgpd empresarial">
+                <div class="document-card-image">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <div class="document-card-content">
+                    <div class="document-tags">
+                        <span class="document-tag">LGPD</span>
+                        <span class="document-tag">Empresarial</span>
+                    </div>
+                    <h3>Termo de Consentimento LGPD</h3>
+                    <div class="document-meta">
+                        <span><i class="far fa-calendar"></i> Atualizado: 11/2025</span>
+                        <span><i class="far fa-file-word"></i> Word (.docx)</span>
+                    </div>
+                    <p>Modelo de termo de consentimento para coleta e tratamento de dados pessoais, conforme exigido pela Lei Geral de Proteção de Dados.</p>
+                    <a href="modelo-termo-consentimento-lgpd.html" class="download-document">
+                        <span>Ver Modelo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Documento 5 -->
+            <article class="document-card" data-category="contratos digital">
+                <div class="document-card-image">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="document-card-content">
+                    <div class="document-tags">
+                        <span class="document-tag">Contratos</span>
+                        <span class="document-tag">Digital</span>
+                    </div>
+                    <h3>Contrato de Prestação de Serviços Digitais</h3>
+                    <div class="document-meta">
+                        <span><i class="far fa-calendar"></i> Atualizado: 10/2025</span>
+                        <span><i class="far fa-file-word"></i> Word (.docx)</span>
+                    </div>
+                    <p>Contrato específico para serviços digitais: desenvolvimento de sites, aplicativos, marketing digital e consultoria em tecnologia.</p>
+                    <a href="modelo-contrato-servicos-digitais.html" class="download-document">
+                        <span>Ver Modelo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Documento 6 -->
+            <article class="document-card" data-category="lgpd">
+                <div class="document-card-image">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="document-card-content">
+                    <div class="document-tags">
+                        <span class="document-tag">LGPD</span>
+                        <span class="document-tag">Compliance</span>
+                    </div>
+                    <h3>Política de Segurança da Informação</h3>
+                    <div class="document-meta">
+                        <span><i class="far fa-calendar"></i> Atualizado: 10/2025</span>
+                        <span><i class="far fa-file-word"></i> Word (.docx)</span>
+                    </div>
+                    <p>Política completa de segurança da informação para empresas, com diretrizes de proteção de dados, senhas e acesso a sistemas.</p>
+                    <a href="modelo-politica-seguranca.html" class="download-document">
+                        <span>Ver Modelo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Documento 7 -->
+            <article class="document-card" data-category="contratos empresarial">
+                <div class="document-card-image">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="document-card-content">
+                    <div class="document-tags">
+                        <span class="document-tag">Contratos</span>
+                        <span class="document-tag">Empresarial</span>
+                    </div>
+                    <h3>Contrato Social - Sociedade Limitada (LTDA)</h3>
+                    <div class="document-meta">
+                        <span><i class="far fa-calendar"></i> Atualizado: 09/2025</span>
+                        <span><i class="far fa-file-word"></i> Word (.docx)</span>
+                    </div>
+                    <p>Modelo de contrato social para constituição de sociedade limitada, com cláusulas de capital social, administração e quórum.</p>
+                    <a href="modelo-contrato-social-ltda.html" class="download-document">
+                        <span>Ver Modelo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Documento 8 -->
+            <article class="document-card" data-category="contratos digital">
+                <div class="document-card-image">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <div class="document-card-content">
+                    <div class="document-tags">
+                        <span class="document-tag">Contratos</span>
+                        <span class="document-tag">Digital</span>
+                    </div>
+                    <h3>Termos de Uso - Site/Aplicativo</h3>
+                    <div class="document-meta">
+                        <span><i class="far fa-calendar"></i> Atualizado: 09/2025</span>
+                        <span><i class="far fa-file-word"></i> Word (.docx)</span>
+                    </div>
+                    <p>Termos de uso completos para sites, aplicativos e plataformas digitais. Inclui regras de conduta, propriedade intelectual e limitação de responsabilidade.</p>
+                    <a href="modelo-termos-uso.html" class="download-document">
+                        <span>Ver Modelo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <div class="documents-cta">
+            <h2>Precisa de Documentos Personalizados?</h2>
+            <p>Modelos prontos são um ótimo ponto de partida, mas cada negócio tem necessidades específicas</p>
+            <a href="index.html#contact" class="btn btn-primary" style="margin-top: 1rem;">
+                <span>Consultoria Personalizada</span>
+                <i class="fas fa-calendar-check"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Dr.Reginaldo</span>
+                    </div>
+                    <p>Excelência em advocacia empresarial estratégica</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navegação</h4>
+                        <a href="index.html">Início</a>
+                        <a href="index.html#about">Sobre</a>
+                        <a href="index.html#services">Serviços</a>
+                        <a href="artigos.html">Artigos</a>
+                        <a href="documentos.html">Documentos</a>
+                        <a href="index.html#contact">Contato</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="politica-privacidade.html">Política de Privacidade</a>
+                        <a href="termos-uso.html">Termos de Uso</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Contato</h4>
+                        <a href="tel:+5571996510966">(71) 99651-0966</a>
+                        <a href="mailto:contato@advogadonomade.com.br">contato@advogadonomade.com.br</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Reginaldo - Advogado. Todos os direitos reservados.</p>
+                <p>OAB/SC 57.879</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5571996510966?text=Olá! Gostaria de mais informações sobre os modelos de documentos jurídicos." class="whatsapp-float" target="_blank" title="Tire suas dúvidas no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Filtros de documentos
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const documentCards = document.querySelectorAll('.document-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    documentCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.style.display = 'flex';
+                        } else {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            if (categories.includes(filterValue)) {
+                                card.style.display = 'flex';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
