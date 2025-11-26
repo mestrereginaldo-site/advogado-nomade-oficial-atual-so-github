@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade</title>
-    <meta name="description" content="Consultoria jurídica premium para empresas. LGPD, compliance digital, direito empresarial estratégico. Soluções personalizadas e resultados mensuráveis.">
-    <meta name="keywords" content="consultoria jurídica, advogado consultor, LGPD consultoria, compliance digital, direito empresarial">
+    <meta name="description" content="Consultoria jurídica premium para empresas. LGPD, compliance digital, direito empresarial estratégico. Soluções personalizadas e resultados mensuráveis. OAB/SC 57.879">
+    <meta name="keywords" content="consultoria jurídica, advogado consultor, LGPD consultoria, compliance digital, direito empresarial, consultoria para PMEs, advogado nômade">
+    <meta name="author" content="Dr. Reginaldo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.advogadonomade.com.br/consultoria.html">
+    <meta property="og:title" content="Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade">
+    <meta property="og:description" content="Consultoria jurídica premium para empresas. LGPD, compliance digital, direito empresarial estratégico. Soluções personalizadas.">
+    <meta property="og:image" content="https://www.advogadonomade.com.br/assets/consultoria-og.jpg">
+    <meta property="og:site_name" content="Dr. Reginaldo - Advogado Nômade">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Consultoria Jurídica Estratégica | Dr. Reginaldo">
+    <meta name="twitter:description" content="Consultoria jurídica premium para empresas em transformação digital">
+    <meta name="twitter:image" content="https://www.advogadonomade.com.br/assets/consultoria-og.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.advogadonomade.com.br/consultoria.html">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Consultoria Jurídica Estratégica",
+        "description": "Consultoria jurídica premium para empresas em transformação digital",
+        "provider": {
+            "@type": "LegalService",
+            "name": "Dr. Reginaldo - Advogado Nômade",
+            "telephone": "+5571996510966",
+            "areaServed": "BR"
+        },
+        "serviceType": "Consultoria Jurídica",
+        "category": "Legal Service",
+        "offers": {
+            "@type": "Offer",
+            "description": "Consultoria Express LGPD",
+            "price": "1497",
+            "priceCurrency": "BRL"
+        }
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
@@ -20,8 +63,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --gold-color: #e94560;
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-card: #ffffff;
+            --border-color: #e1e8ed;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --gradient: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #ecf0f1;
+            --accent-color: #3498db;
+            --gold-color: #e94560;
+            --text-primary: #ecf0f1;
+            --text-secondary: #bdc3c7;
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d3436;
+            --bg-card: #2d3436;
+            --border-color: #34495e;
+            --shadow: 0 10px 30px rgba(0,0,0,0.3);
+            --gradient: linear-gradient(135deg, #e94560 0%, #3498db 100%);
+        }
+
         .consulting-hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            background: var(--gradient);
             color: white;
             padding: 8rem 2rem 4rem;
             text-align: center;
@@ -34,11 +106,40 @@
             line-height: 1.2;
         }
 
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .title-highlight {
+            color: #ffd700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
         .consulting-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .stat-card {
@@ -46,12 +147,69 @@
             padding: 2rem;
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: #ffd700;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
         }
 
         .packages-grid {
@@ -70,6 +228,7 @@
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            box-shadow: var(--shadow);
         }
 
         .package-card.featured {
@@ -79,7 +238,11 @@
 
         .package-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .package-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
         }
 
         .package-badge {
@@ -116,6 +279,7 @@
             list-style: none;
             padding: 0;
             margin: 2rem 0;
+            text-align: left;
         }
 
         .package-features li {
@@ -211,6 +375,7 @@
             padding: 2rem;
             border-radius: 15px;
             border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
         }
 
         .faq-question {
@@ -233,6 +398,7 @@
             border-radius: 20px;
             text-align: center;
             margin: 4rem 0;
+            box-shadow: var(--shadow);
         }
 
         .urgency-banner h3 {
@@ -252,9 +418,42 @@
             border: 1px solid #27ae60;
         }
 
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
         @media (max-width: 768px) {
+            .consulting-hero {
+                padding: 6rem 1rem 3rem;
+            }
+
             .consulting-hero h1 {
                 font-size: 2.2rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
             }
 
             .package-card.featured {
@@ -271,6 +470,17 @@
 
             .faq-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
             }
         }
     </style>
@@ -337,19 +547,19 @@
 
             <div class="consulting-stats">
                 <div class="stat-card">
-                    <div class="stat-number">48h</div>
+                    <div class="stat-number" data-count="48">0</div>
                     <div class="stat-label">Diagnóstico Express</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">98%</div>
+                    <div class="stat-number" data-count="98">0</div>
                     <div class="stat-label">Clientes Satisfeitos</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">R$ 2M+</div>
+                    <div class="stat-number" data-count="2000000">2M+</div>
                     <div class="stat-label">Multas Evitadas</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">24/7</div>
+                    <div class="stat-number" data-count="24">24/7</div>
                     <div class="stat-label">Suporte Prioritário</div>
                 </div>
             </div>
@@ -368,7 +578,7 @@
     </section>
 
     <!-- Packages Section -->
-    <section id="packages" class="services">
+    <section id="packages" class="services" style="padding: 5rem 0; background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Planos de Consultoria</h2>
@@ -397,7 +607,7 @@
                         <li><i class="fas fa-check"></i> Suporte 15 dias</li>
                     </ul>
 
-                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Express por R$ 1.497" class="btn btn-primary" target="_blank">
+                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Express por R$ 1.497" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
                         <span>Contratar Agora</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -426,7 +636,7 @@
                         <li><i class="fas fa-check"></i> Suporte 60 dias</li>
                     </ul>
 
-                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Estratégica por R$ 3.997" class="btn btn-primary" target="_blank">
+                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Estratégica por R$ 3.997" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
                         <span>Contratar Agora</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -454,16 +664,18 @@
                         <li><i class="fas fa-check"></i> Consultoria 24/7</li>
                     </ul>
 
-                    <a href="https://wa.me/5571996510966?text=Quero o Plano Compliance Contínuo por R$ 997/mês" class="btn btn-primary" target="_blank">
+                    <a href="https://wa.me/5571996510966?text=Quero o Plano Compliance Contínuo por R$ 997/mês" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
                         <span>Contratar Agora</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="guarantee-badge">
-                <i class="fas fa-shield-alt"></i>
-                <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+            <div style="text-align: center;">
+                <div class="guarantee-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+                </div>
             </div>
         </div>
     </section>
@@ -481,7 +693,7 @@
     </section>
 
     <!-- Process Section -->
-    <section class="about">
+    <section class="about" style="padding: 5rem 0;">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Como Funciona Nossa Consultoria</h2>
@@ -514,7 +726,7 @@
     </section>
 
     <!-- Comparison Section -->
-    <section class="services">
+    <section class="services" style="padding: 5rem 0; background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Compare os Planos</h2>
@@ -585,7 +797,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="about">
+    <section class="about" style="padding: 5rem 0;">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Perguntas Frequentes</h2>
@@ -645,11 +857,11 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="contact">
+    <section class="contact" style="padding: 5rem 0; background: var(--gradient); color: white;">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Pronto para Transformar Seu Negócio?</h2>
-                <p class="section-subtitle">Agende uma consultoria estratégica sem compromisso</p>
+                <h2 class="section-title" style="color: white;">Pronto para Transformar Seu Negócio?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Agende uma consultoria estratégica sem compromisso</p>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
@@ -657,14 +869,14 @@
                     <span>WhatsApp Rápido</span>
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="index.html#contact" class="btn btn-secondary" style="margin: 0.5rem;">
+                <a href="index.html#contact" class="btn btn-secondary" style="margin: 0.5rem; background: transparent; color: white; border: 2px solid white;">
                     <span>Formulário de Contato</span>
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <p><strong>⚠️ Vagas Limitadas:</strong> Apenas 5 consultorias por mês para garantir qualidade máxima</p>
+                <p style="opacity: 0.9;"><strong>⚠️ Vagas Limitadas:</strong> Apenas 5 consultorias por mês para garantir qualidade máxima</p>
             </div>
         </div>
     </section>
@@ -722,6 +934,70 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    
+    <script>
+        // Script para animar os números das estatísticas
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animação dos números
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            const animateNumbers = () => {
+                statNumbers.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-count'));
+                    const duration = 2000; // 2 segundos
+                    const step = target / (duration / 16); // 60fps
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        
+                        if (target >= 1000) {
+                            // Formatar números grandes
+                            stat.textContent = Math.floor(current).toLocaleString('pt-BR');
+                        } else {
+                            stat.textContent = Math.floor(current);
+                        }
+                    }, 16);
+                });
+            };
+            
+            // Iniciar animação quando a seção estiver visível
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateNumbers();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(document.querySelector('.consulting-stats'));
+            
+            // Tema toggle
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    document.body.setAttribute('data-theme', 
+                        document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+                    );
+                });
+            }
+            
+            // Menu mobile
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
