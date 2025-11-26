@@ -4,25 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade</title>
-    <meta name="description" content="Consultoria jurídica estratégica para negócios digitais. Pacotes personalizados com resultados garantidos. Atendimento em todo Brasil.">
-    
-    <!-- Meta tags existentes -->
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.advogadonomade.com.br/consultoria.html">
-    <meta property="og:title" content="Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade">
-    <meta property="og:description" content="Consultoria jurídica estratégica para negócios em transformação digital. Resultados em 30 dias ou devolução do investimento.">
-    <meta property="og:image" content="https://www.advogadonomade.com.br/assets/consultoria-og.jpg">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Consultoria Jurídica Estratégica">
-    <meta name="twitter:description" content="Soluções jurídicas ágeis para empresas que não podem esperar.">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.advogadonomade.com.br/consultoria.html">
+    <meta name="description" content="Consultoria jurídica premium para empresas. LGPD, compliance digital, direito empresarial estratégico. Soluções personalizadas e resultados mensuráveis.">
+    <meta name="keywords" content="consultoria jurídica, advogado consultor, LGPD consultoria, compliance digital, direito empresarial">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
@@ -35,6 +18,262 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .consulting-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .consulting-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .consulting-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .package-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card.featured {
+            border: 2px solid var(--gold-color);
+            transform: scale(1.05);
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gold-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .package-icon {
+            font-size: 3rem;
+            color: var(--gold-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .package-price .period {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .package-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .package-features li i {
+            color: #27ae60;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            background: var(--gradient);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            background: var(--bg-card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table .feature-name {
+            text-align: left;
+            font-weight: 600;
+            background: var(--bg-secondary);
+        }
+
+        .check-mark {
+            color: #27ae60;
+            font-size: 1.2rem;
+        }
+
+        .cross-mark {
+            color: #e74c3c;
+            font-size: 1.2rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-question i {
+            color: var(--gold-color);
+        }
+
+        .urgency-banner {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .urgency-banner h3 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            margin: 2rem 0;
+            border: 1px solid #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .consulting-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .package-card.featured {
+                transform: none;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.8rem;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Particle Background -->
@@ -61,9 +300,9 @@
                 <a href="index.html" class="nav-link">Início</a>
                 <a href="index.html#about" class="nav-link">Sobre</a>
                 <a href="index.html#services" class="nav-link">Serviços</a>
+                <a href="consultoria.html" class="nav-link active">Consultoria</a>
                 <a href="artigos.html" class="nav-link">Artigos</a>
                 <a href="documentos.html" class="nav-link">Documentos</a>
-                <a href="consultoria.html" class="nav-link active">Consultoria</a>
                 <a href="index.html#contact" class="nav-link">Contato</a>
             </div>
 
@@ -82,341 +321,350 @@
         </nav>
     </header>
 
-    <!-- Hero Consultoria -->
-    <section class="consultoria-hero">
+    <!-- Consulting Hero -->
+    <section class="consulting-hero">
         <div class="container">
-            <div class="consultoria-hero-content">
-                <div class="hero-badge">
-                    <span>Transforme Seu Negócio</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    Consultoria Jurídica <span class="title-highlight">Estratégica</span>
-                </h1>
-                
-                <p class="hero-description">
-                    Soluções jurídicas <strong>ágeis e eficientes</strong> para empresas que não podem esperar. 
-                    <strong>Resultados garantidos</strong> em até 30 dias ou devolvemos seu investimento.
-                </p>
+            <div class="hero-badge">
+                <span>Consultoria Jurídica Premium</span>
+            </div>
+            
+            <h1>Soluções Jurídicas que <span class="title-highlight">Impulsionam Seu Negócio</span></h1>
+            
+            <p class="hero-description">
+                Consultoria estratégica personalizada para proteger seu negócio, garantir compliance e <strong>maximizar resultados</strong>. 
+                Atendimento <strong>nômade em todo Brasil</strong> com metodologia exclusiva.
+            </p>
 
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number" data-count="24">0</div>
-                        <div class="stat-label">Horas p/ Resposta</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number" data-count="98">0</div>
-                        <div class="stat-label">% de Sucesso</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number" data-count="150">0</div>
-                        <div class="stat-label">Clientes Atendidos</div>
-                    </div>
+            <div class="consulting-stats">
+                <div class="stat-card">
+                    <div class="stat-number">48h</div>
+                    <div class="stat-label">Diagnóstico Express</div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">R$ 2M+</div>
+                    <div class="stat-label">Multas Evitadas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Suporte Prioritário</div>
+                </div>
+            </div>
 
-                <div class="hero-actions">
-                    <a href="#pacotes" class="btn btn-primary">
-                        <span>Ver Pacotes</span>
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                    <a href="#agendar" class="btn btn-secondary">
-                        <span>Falar Especialista</span>
-                        <i class="fas fa-calendar-check"></i>
-                    </a>
-                </div>
+            <div class="hero-actions">
+                <a href="#packages" class="btn btn-primary">
+                    <span>Ver Planos de Consultoria</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de uma consultoria urgente sobre LGPD." class="btn btn-secondary" target="_blank">
+                    <span>LGPD Urgente</span>
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Problemas Comuns -->
-    <section class="problemas-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Problemas que Resolvemos em 30 Dias</h2>
-                <p class="section-subtitle">Identificamos e solucionamos os principais desafios jurídicos do mercado digital</p>
-            </div>
-
-            <div class="problemas-grid">
-                <div class="problema-card">
-                    <div class="problema-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <h3>Multas da LGPD</h3>
-                    <p>Empresas recebendo notificações ou multas por descumprimento da lei de proteção de dados</p>
-                    <div class="solucao-tag">
-                        <i class="fas fa-check-circle"></i>
-                        Solução: Adequação em 15 dias
-                    </div>
-                </div>
-
-                <div class="problema-card">
-                    <div class="problema-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <h3>Contratos Inseguros</h3>
-                    <p>Contratos digitais com cláusulas vulneráveis que colocam seu negócio em risco</p>
-                    <div class="solucao-tag">
-                        <i class="fas fa-check-circle"></i>
-                        Solução: Revisão completa em 7 dias
-                    </div>
-                </div>
-
-                <div class="problema-card">
-                    <div class="problema-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Expansão com Risco</h3>
-                    <p>Crescimento acelerado sem estrutura jurídica para suportar operações em novos mercados</p>
-                    <div class="solucao-tag">
-                        <i class="fas fa-check-circle"></i>
-                        Solução: Estruturação em 20 dias
-                    </div>
-                </div>
-
-                <div class="problema-card">
-                    <div class="problema-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Compliance Digital</h3>
-                    <p>Falta de políticas internas para operações online, aumentando vulnerabilidade jurídica</p>
-                    <div class="solucao-tag">
-                        <i class="fas fa-check-circle"></i>
-                        Solução: Implementação em 30 dias
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pacotes de Consultoria -->
-    <section id="pacotes" class="pacotes-section">
+    <!-- Packages Section -->
+    <section id="packages" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Pacotes de Consultoria</h2>
-                <p class="section-subtitle">Escolha o plano ideal para o momento do seu negócio</p>
+                <h2 class="section-title">Planos de Consultoria</h2>
+                <p class="section-subtitle">Escolha a solução ideal para o momento do seu negócio</p>
             </div>
 
-            <div class="pacotes-grid">
-                <!-- Pacote Básico -->
-                <div class="pacote-card">
-                    <div class="pacote-header">
-                        <h3>Consultoria Essencial</h3>
-                        <div class="preco">
-                            <span class="valor">R$ 1.497</span>
-                            <span class="periodo">/projeto</span>
-                        </div>
-                        <p>Ideal para startups e pequenos negócios</p>
+            <div class="packages-grid">
+                <!-- Plano Express -->
+                <div class="package-card">
+                    <div class="package-icon">
+                        <i class="fas fa-bolt"></i>
                     </div>
+                    <h3>Consultoria Express</h3>
+                    <p>Solução rápida para urgências jurídicas</p>
                     
-                    <div class="pacote-beneficios">
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Diagnóstico jurídico completo</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Plano de ação em 48h</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>2 sessões de mentoria (1h cada)</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Suporte por 30 dias</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Checklist de compliance básico</span>
-                        </div>
+                    <div class="package-price">
+                        R$ 1.497
+                        <span class="period">/único</span>
                     </div>
 
-                    <div class="pacote-cta">
-                        <a href="https://wa.me/5571996510966?text=Olá! Gostaria de contratar a Consultoria Essencial" class="btn btn-outline" target="_blank">
-                            <span>Contratar Agora</span>
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Diagnóstico LGPD em 48h</li>
+                        <li><i class="fas fa-check"></i> 2 Sessões de Mentoria</li>
+                        <li><i class="fas fa-check"></i> Plano de Ação Prioritário</li>
+                        <li><i class="fas fa-check"></i> Checklist Compliance</li>
+                        <li><i class="fas fa-check"></i> Suporte 15 dias</li>
+                    </ul>
+
+                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Express por R$ 1.497" class="btn btn-primary" target="_blank">
+                        <span>Contratar Agora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Pacote Avançado -->
-                <div class="pacote-card featured">
-                    <div class="destaque-badge">
-                        <i class="fas fa-crown"></i>
-                        Mais Popular
+                <!-- Plano Estratégico (Featured) -->
+                <div class="package-card featured">
+                    <div class="package-badge">MAIS POPULAR</div>
+                    <div class="package-icon">
+                        <i class="fas fa-chess-queen"></i>
                     </div>
-                    <div class="pacote-header">
-                        <h3>Consultoria Estratégica</h3>
-                        <div class="preco">
-                            <span class="valor">R$ 3.997</span>
-                            <span class="periodo">/projeto</span>
-                        </div>
-                        <p>Para empresas em crescimento acelerado</p>
-                    </div>
+                    <h3>Consultoria Estratégica</h3>
+                    <p>Proteção jurídica completa para crescimento</p>
                     
-                    <div class="pacote-beneficios">
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Tudo do plano Essencial +</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Implementação de compliance digital</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Revisão de 5 contratos</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>4 sessões de mentoria</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Suporte prioritário 60 dias</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Políticas de privacidade e termos</span>
-                        </div>
+                    <div class="package-price">
+                        R$ 3.997
+                        <span class="period">/único</span>
                     </div>
 
-                    <div class="pacote-cta">
-                        <a href="https://wa.me/5571996510966?text=Olá! Gostaria de contratar a Consultoria Estratégica" class="btn btn-primary" target="_blank">
-                            <span>Contratar Agora</span>
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Análise Empresarial Completa</li>
+                        <li><i class="fas fa-check"></i> Planejamento Jurídico 6 meses</li>
+                        <li><i class="fas fa-check"></i> 4 Sessões Mensais</li>
+                        <li><i class="fas fa-check"></i> Revisão de Contratos</li>
+                        <li><i class="fas fa-check"></i> Políticas Personalizadas</li>
+                        <li><i class="fas fa-check"></i> Suporte 60 dias</li>
+                    </ul>
+
+                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Estratégica por R$ 3.997" class="btn btn-primary" target="_blank">
+                        <span>Contratar Agora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Pacote Enterprise -->
-                <div class="pacote-card">
-                    <div class="pacote-header">
-                        <h3>Consultoria Enterprise</h3>
-                        <div class="preco">
-                            <span class="valor">R$ 7.997</span>
-                            <span class="periodo">/projeto</span>
-                        </div>
-                        <p>Para empresas estabelecidas</p>
+                <!-- Plano Contínuo -->
+                <div class="package-card">
+                    <div class="package-icon">
+                        <i class="fas fa-infinity"></i>
                     </div>
+                    <h3>Compliance Contínuo</h3>
+                    <p>Proteção jurídica mensal sem preocupações</p>
                     
-                    <div class="pacote-beneficios">
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Tudo do plano Estratégico +</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Consultoria personalizada</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Atendimento dedicado</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Implementação completa</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Revisão ilimitada de contratos</span>
-                        </div>
-                        <div class="beneficio">
-                            <i class="fas fa-check"></i>
-                            <span>Suporte anual</span>
-                        </div>
+                    <div class="package-price">
+                        R$ 997
+                        <span class="period">/mês</span>
                     </div>
 
-                    <div class="pacote-cta">
-                        <a href="https://wa.me/5571996510966?text=Olá! Gostaria de informações sobre a Consultoria Enterprise" class="btn btn-outline" target="_blank">
-                            <span>Falar com Especialista</span>
-                            <i class="fas fa-headset"></i>
-                        </a>
-                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Suporte Jurídico Ilimitado</li>
+                        <li><i class="fas fa-check"></i> DPO Terceirizado</li>
+                        <li><i class="fas fa-check"></i> Revisão de Documentos</li>
+                        <li><i class="fas fa-check"></i> Atualização Legislativa</li>
+                        <li><i class="fas fa-check"></i> Relatórios Mensais</li>
+                        <li><i class="fas fa-check"></i> Consultoria 24/7</li>
+                    </ul>
+
+                    <a href="https://wa.me/5571996510966?text=Quero o Plano Compliance Contínuo por R$ 997/mês" class="btn btn-primary" target="_blank">
+                        <span>Contratar Agora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="garantia-section">
-                <div class="garantia-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <div class="garantia-content">
-                        <h3>Garantia de Satisfação</h3>
-                        <p>Se em 30 dias você não estiver completamente satisfeito com os resultados, devolvemos 100% do seu investimento. Sem burocracia.</p>
-                    </div>
-                </div>
+            <div class="guarantee-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Garantia de 7 dias ou seu dinheiro de volta</span>
             </div>
         </div>
     </section>
 
-    <!-- Processo de Consultoria -->
-    <section class="processo-section">
+    <!-- Urgency Banner -->
+    <section class="urgency-banner">
+        <div class="container">
+            <h3>⚠️ LGPD: O Prazo Está Acabando!</h3>
+            <p>Multas da ANPD já estão sendo aplicadas. Proteja seu negócio antes que seja tarde demais.</p>
+            <a href="https://wa.me/5571996510966?text=URGENTE! Preciso de ajuda com LGPD agora!" class="btn btn-secondary" target="_blank">
+                <span>Consultoria LGPD Urgente</span>
+                <i class="fas fa-exclamation-triangle"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="about">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Como Funciona Nossa Consultoria</h2>
-                <p class="section-subtitle">Processo ágil e transparente do início ao resultado</p>
+                <p class="section-subtitle">Metodologia exclusiva com resultados comprovados</p>
             </div>
 
-            <div class="processo-timeline">
-                <div class="processo-item">
-                    <div class="processo-number">1</div>
-                    <div class="processo-content">
-                        <h3>Diagnóstico Inicial</h3>
-                        <p>Análise completa da situação jurídica atual do seu negócio em até 48h</p>
-                    </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Diagnóstico Completo</h3>
+                    <p>Análise detalhada da situação jurídica atual do seu negócio</p>
                 </div>
-                <div class="processo-item">
-                    <div class="processo-number">2</div>
-                    <div class="processo-content">
-                        <h3>Plano de Ação</h3>
-                        <p>Estratégia personalizada com prazos, custos e resultados esperados</p>
-                    </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Plano Estratégico</h3>
+                    <p>Desenvolvimento de roadmap personalizado com prioridades claras</p>
                 </div>
-                <div class="processo-item">
-                    <div class="processo-number">3</div>
-                    <div class="processo-content">
-                        <h3>Implementação</h3>
-                        <p>Execução do plano com acompanhamento constante e ajustes necessários</p>
-                    </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Implementação</h3>
+                    <p>Execução das ações com acompanhamento próximo e suporte total</p>
                 </div>
-                <div class="processo-item">
-                    <div class="processo-number">4</div>
-                    <div class="processo-content">
-                        <h3>Entrega de Resultados</h3>
-                        <p>Documentação completa e treinamento da equipe para autonomia futura</p>
-                    </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Resultados Mensuráveis</h3>
+                    <p>Acompanhamento de KPIs e ajustes estratégicos contínuos</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Final -->
-    <section id="agendar" class="cta-final">
+    <!-- Comparison Section -->
+    <section class="services">
         <div class="container">
-            <div class="cta-content">
-                <h2>Pronto para Transformar Seu Negócio?</h2>
-                <p>Agende uma consulta estratégica gratuita de 30 minutos e descubra como podemos resolver seus desafios jurídicos</p>
-                
-                <div class="cta-actions">
-                    <a href="https://wa.me/5571996510966?text=Olá! Gostaria de agendar uma consulta estratégica gratuita" class="btn btn-primary btn-large" target="_blank">
-                        <span>Agendar Consulta Gratuita</span>
-                        <i class="fas fa-calendar-check"></i>
-                    </a>
-                    
-                    <div class="cta-info">
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <span>30 minutos gratuitos</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-check"></i>
-                            <span>Sem compromisso</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-star"></i>
-                            <span>Plano personalizado</span>
-                        </div>
+            <div class="section-header">
+                <h2 class="section-title">Compare os Planos</h2>
+                <p class="section-subtitle">Escolha a solução perfeita para suas necessidades</p>
+            </div>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="feature-name">Recursos Incluídos</th>
+                        <th>Express</th>
+                        <th>Estratégica</th>
+                        <th>Contínuo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-name">Diagnóstico LGPD Completo</td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Sessões de Mentoria</td>
+                        <td>2 sessões</td>
+                        <td>4 sessões</td>
+                        <td>Ilimitado</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Revisão de Contratos</td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td>Até 5 contratos</td>
+                        <td>Ilimitado</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Políticas Personalizadas</td>
+                        <td>Básicas</td>
+                        <td>Completas</td>
+                        <td>Completas + Atualizações</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">DPO Terceirizado</td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Suporte por WhatsApp</td>
+                        <td>15 dias</td>
+                        <td>60 dias</td>
+                        <td>Ilimitado</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Relatórios de Compliance</td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td>Mensal</td>
+                        <td>Mensal Detalhado</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Atualização Legislativa</td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Tire suas dúvidas sobre nossa consultoria</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        Qual o prazo para início da consultoria?
                     </div>
+                    <p>Iniciamos em até 24 horas após a contratação. Para casos de urgência, podemos começar no mesmo dia.</p>
                 </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        A consultoria é presencial ou remota?
+                    </div>
+                    <p>Oferecemos ambas as modalidades. Atendimento remoto para todo Brasil e presencial nas principais capitais.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        Posso cancelar a qualquer momento?
+                    </div>
+                    <p>Sim! Oferecemos garantia de 7 dias. Para planos mensais, cancelamento sem multa com 30 dias de aviso.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        Vocês emitem nota fiscal?
+                    </div>
+                    <p>Sim, emitimos nota fiscal de serviço para todas as consultorias, ideal para dedução fiscal da empresa.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        E se eu tiver uma emergência fora do horário comercial?
+                    </div>
+                    <p>No plano Contínuo oferecemos suporte 24/7. Nos outros planos, emergências são atendidas com taxa adicional.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        Vocês atendem empresas de qualquer segmento?
+                    </div>
+                    <p>Sim! Atendemos desde startups até grandes corporações, com especialização em e-commerce, tech e serviços.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pronto para Transformar Seu Negócio?</h2>
+                <p class="section-subtitle">Agende uma consultoria estratégica sem compromisso</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de agendar uma consultoria estratégica." class="btn btn-primary" style="margin: 0.5rem;" target="_blank">
+                    <span>WhatsApp Rápido</span>
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="index.html#contact" class="btn btn-secondary" style="margin: 0.5rem;">
+                    <span>Formulário de Contato</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p><strong>⚠️ Vagas Limitadas:</strong> Apenas 5 consultorias por mês para garantir qualidade máxima</p>
             </div>
         </div>
     </section>
@@ -440,14 +688,16 @@
                         <a href="index.html#about">Sobre</a>
                         <a href="index.html#services">Serviços</a>
                         <a href="consultoria.html">Consultoria</a>
+                        <a href="artigos.html">Artigos</a>
+                        <a href="index.html#contact">Contato</a>
                     </div>
 
                     <div class="link-group">
-                        <h4>Serviços</h4>
-                        <a href="index.html#services">Direito Empresarial</a>
-                        <a href="index.html#services">Compliance Digital</a>
-                        <a href="index.html#services">Contratos</a>
-                        <a href="index.html#services">LGPD</a>
+                        <h4>Consultorias</h4>
+                        <a href="#packages">Consultoria Express</a>
+                        <a href="#packages">Consultoria Estratégica</a>
+                        <a href="#packages">Compliance Contínuo</a>
+                        <a href="#packages">LGPD Urgente</a>
                     </div>
 
                     <div class="link-group">
@@ -466,517 +716,12 @@
     </footer>
 
     <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5571996510966?text=Olá! Gostaria de mais informações sobre consultoria jurídica." class="whatsapp-float" target="_blank" title="Fale comigo no WhatsApp">
+    <a href="https://wa.me/5571996510966?text=Olá! Gostaria de informações sobre consultoria jurídica." class="whatsapp-float" target="_blank" title="Consultoria Jurídica">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
-    
-    <style>
-        /* Estilos específicos para a página de consultoria */
-        .consultoria-hero {
-            padding: 140px 0 80px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .consultoria-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.05)"><polygon points="0,0 1000,50 1000,100 0,100"/></svg>') no-repeat center bottom;
-            background-size: cover;
-        }
-
-        .consultoria-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .consultoria-hero .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .consultoria-hero .hero-description {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-            opacity: 0.95;
-        }
-
-        .consultoria-hero .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
-        }
-
-        .consultoria-hero .stat {
-            text-align: center;
-        }
-
-        .consultoria-hero .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--gold-color);
-        }
-
-        .consultoria-hero .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .consultoria-hero .hero-actions {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .problemas-section {
-            padding: 100px 0;
-            background: var(--bg-secondary);
-        }
-
-        .problemas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .problema-card {
-            background: var(--bg-card);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .problema-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
-        }
-
-        .problema-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .problema-icon {
-            font-size: 3.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .problema-card h3 {
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .problema-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .solucao-tag {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-        }
-
-        .pacotes-section {
-            padding: 100px 0;
-            background: var(--bg-primary);
-        }
-
-        .pacotes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .pacote-card {
-            background: var(--bg-card);
-            border-radius: 25px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            display: flex;
-            flex-direction: column;
-            height: fit-content;
-        }
-
-        .pacote-card.featured {
-            transform: scale(1.05);
-            border: 2px solid var(--gold-color);
-            box-shadow: 0 20px 40px rgba(233, 69, 96, 0.2);
-        }
-
-        .pacote-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-        }
-
-        .pacote-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-
-        .destaque-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--gold-color) 0%, #ff9f43 100%);
-            color: white;
-            padding: 0.7rem 2rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
-        }
-
-        .pacote-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid var(--border-color);
-        }
-
-        .pacote-header h3 {
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            font-size: 1.6rem;
-        }
-
-        .preco {
-            margin: 1.5rem 0;
-        }
-
-        .valor {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            display: block;
-            line-height: 1;
-        }
-
-        .periodo {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        .pacote-header p {
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        .pacote-beneficios {
-            margin-bottom: 2.5rem;
-            flex-grow: 1;
-        }
-
-        .beneficio {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.2rem;
-            color: var(--text-primary);
-            line-height: 1.5;
-        }
-
-        .beneficio i {
-            color: #27ae60;
-            margin-top: 0.2rem;
-            flex-shrink: 0;
-        }
-
-        .pacote-cta {
-            margin-top: auto;
-        }
-
-        .garantia-section {
-            margin-top: 5rem;
-        }
-
-        .garantia-card {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-            box-shadow: 0 15px 35px rgba(233, 69, 96, 0.2);
-        }
-
-        .garantia-card i {
-            font-size: 4rem;
-            opacity: 0.9;
-        }
-
-        .garantia-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .garantia-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.95;
-        }
-
-        .processo-section {
-            padding: 100px 0;
-            background: var(--bg-secondary);
-        }
-
-        .processo-timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-            position: relative;
-        }
-
-        .processo-timeline::before {
-            content: '';
-            position: absolute;
-            top: 60px;
-            left: 50px;
-            right: 50px;
-            height: 3px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
-            z-index: 1;
-        }
-
-        .processo-item {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: var(--bg-card);
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            position: relative;
-            z-index: 2;
-            transition: transform 0.3s ease;
-        }
-
-        .processo-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .processo-number {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-            box-shadow: 0 10px 25px rgba(233, 69, 96, 0.3);
-        }
-
-        .processo-content h3 {
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .processo-content p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .cta-final {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-final::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.05)"><polygon points="0,100 1000,50 1000,0 0,0"/></svg>') no-repeat center top;
-            background-size: cover;
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .cta-content p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            line-height: 1.6;
-        }
-
-        .cta-actions {
-            margin-top: 2.5rem;
-        }
-
-        .btn-large {
-            padding: 1.2rem 2.5rem;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .cta-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: rgba(255,255,255,0.9);
-            font-weight: 500;
-        }
-
-        .info-item i {
-            color: var(--gold-color);
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .consultoria-hero {
-                padding: 120px 0 60px;
-            }
-
-            .consultoria-hero .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .consultoria-hero .hero-description {
-                font-size: 1.1rem;
-            }
-
-            .consultoria-hero .hero-stats {
-                gap: 2rem;
-            }
-
-            .consultoria-hero .stat-number {
-                font-size: 2rem;
-            }
-
-            .pacote-card.featured {
-                transform: none;
-            }
-            
-            .pacote-card.featured:hover {
-                transform: translateY(-10px);
-            }
-            
-            .garantia-card {
-                flex-direction: column;
-                text-align: center;
-                padding: 2rem;
-            }
-
-            .processo-timeline::before {
-                display: none;
-            }
-
-            .cta-content h2 {
-                font-size: 2.2rem;
-            }
-
-            .cta-content p {
-                font-size: 1.1rem;
-            }
-
-            .cta-info {
-                gap: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .consultoria-hero .hero-title {
-                font-size: 2rem;
-            }
-
-            .consultoria-hero .hero-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .pacotes-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .processo-timeline {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </body>
 </html>
