@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM Carregado - Iniciando site...');
     
-    // Remove a tela de carregamento IMEDIATAMENTE
+    // Remove a tela de carregamento
     const loadingScreen = document.querySelector('.loading-screen');
     if (loadingScreen) {
         setTimeout(() => {
@@ -25,10 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(initializeParticles, 2000);
 });
 
-// ===== TOGGLE DE TEMA =====
+// ===== TOGGLE DE TEMA - CORRIGIDO =====
 function initializeThemeToggle() {
-    const themeToggle = document.querySelector('.theme-toggle');
-    if (!themeToggle) return;
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) {
+        console.error('Theme toggle não encontrado');
+        return;
+    }
     
     const themeIcon = themeToggle.querySelector('i');
     
@@ -44,6 +47,8 @@ function initializeThemeToggle() {
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(themeIcon, newTheme);
+        
+        console.log('Tema alterado para:', newTheme);
     });
 }
 
@@ -55,7 +60,7 @@ function updateThemeIcon(icon, theme) {
     }
 }
 
-// ===== PARTÍCULAS BACKGROUND - CORRIGIDO =====
+// ===== PARTÍCULAS BACKGROUND =====
 function initializeParticles() {
     console.log('Inicializando partículas...');
     
@@ -126,43 +131,54 @@ function initializeParticles() {
     }
 }
 
-// ===== NAVEGAÇÃO MOBILE - CORRIGIDA =====
+// ===== NAVEGAÇÃO MOBILE - CORRIGIDA E FUNCIONAL =====
 function initializeNavigation() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            
-            // Previne scroll quando menu está aberto
-            if (navMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        });
+    if (!hamburger || !navMenu) {
+        console.error('Elementos de navegação não encontrados');
+        return;
     }
+
+    // Menu hamburguer
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Previne scroll quando menu está aberto
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
 
     // Fecha menu ao clicar em um link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (hamburger && navMenu) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
         });
     });
 
     // Fecha menu ao clicar fora
     document.addEventListener('click', (e) => {
-        if (navMenu && hamburger && 
+        if (navMenu.classList.contains('active') && 
             !navMenu.contains(e.target) && 
-            !hamburger.contains(e.target) &&
-            navMenu.classList.contains('active')) {
+            !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Fecha menu ao redimensionar a janela
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
             document.body.style.overflow = '';
@@ -284,8 +300,22 @@ window.addEventListener('load', function() {
 // Fallback final - remove loading após 5 segundos NO MÁXIMO
 setTimeout(() => {
     const loadingScreen = document.querySelector('.loading-screen');
-    if (loadingScreen) {
+    if (loadingScreen && loadingScreen.style.display !== 'none') {
         loadingScreen.style.display = 'none';
         console.log('Fallback: Loading screen removida por timeout');
     }
 }, 5000);
+
+// ===== SCROLL SUAVE PARA LINKS INTERNOS =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
