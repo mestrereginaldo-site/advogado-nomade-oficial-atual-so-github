@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratos Inteligentes para Empresas Modernas - Dr. Reginaldo</title>
+    <meta name="description" content="Descubra como os contratos inteligentes podem automatizar e trazer segurança para as transações da sua empresa. Guia completo sobre blockchain e smart contracts.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .article-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .article-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .article-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .article-tag {
+            background: rgba(233, 69, 96, 0.2);
+            color: var(--gold-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .article-section {
+            margin-bottom: 3rem;
+        }
+
+        .article-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-section h2 i {
+            color: var(--gold-color);
+        }
+
+        .article-section h3 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            font-size: 1.3rem;
+        }
+
+        .article-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .article-section ul, .article-section ol {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 1px solid #ffd43b;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #856404;
+        }
+
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            border: 1px solid var(--gold-color);
+            color: #f7fafc;
+        }
+
+        .warning-box h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+            border: 1px solid #b8daff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #0c5460;
+        }
+
+        [data-theme="dark"] .info-box {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            border: 1px solid var(--gold-color);
+            color: #f7fafc;
+        }
+
+        .step-box {
+            background: var(--bg-card);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--gold-color);
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            background: var(--gradient);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-button.prev {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-button.next {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .article-cta {
+            text-align: center;
+            padding: 3rem;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--gold-color);
+            margin-bottom: 1rem;
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .use-case-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--gold-color);
+        }
+
+        @media (max-width: 768px) {
+            .article-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .article-content {
+                padding: 2rem 1rem;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-button {
+                justify-content: center;
+            }
+
+            .feature-grid,
+            .use-case-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Dr.Reginaldo</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#about" class="nav-link">Sobre</a>
+                <a href="index.html#services" class="nav-link">Serviços</a>
+                <a href="artigos.html" class="nav-link active">Artigos</a>
+                <a href="index.html#contact" class="nav-link">Contato</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de agendar uma consulta urgente." class="cta-button" target="_blank">
+                    <span>Consulta Urgente</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-tags">
+                <span class="article-tag">Contratos Inteligentes</span>
+                <span class="article-tag">Blockchain</span>
+                <span class="article-tag">Inovação</span>
+                <span class="article-tag">Tecnologia</span>
+            </div>
+            <h1>Contratos Inteligentes para Empresas Modernas</h1>
+            <div class="article-meta">
+                <div class="meta-item">
+                    <i class="far fa-calendar"></i>
+                    <span>05 de Dezembro de 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-clock"></i>
+                    <span>10 min de leitura</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-eye"></i>
+                    <span>Empresários Inovadores</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <main class="article-content">
+        <div class="article-section">
+            <p><strong>Os contratos inteligentes (smart contracts) estão revolucionando a forma como as empresas realizam transações e automatizam processos.</strong> Mais do que uma tendência tecnológica, eles representam uma evolução natural dos contratos tradicionais, trazendo segurança, transparência e eficiência para o mundo dos negócios.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-lightbulb"></i> O Que São Contratos Inteligentes?</h4>
+                <p>Contratos inteligentes são programas autoexecutáveis que rodam em blockchain e executam automaticamente os termos de um acordo quando condições predefinidas são atendidas, sem necessidade de intermediários.</p>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2><i class="fas fa-cogs"></i> Como Funcionam os Contratos Inteligentes?</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programação</h3>
+                    <p>Termos do contrato são codificados em linhas de código</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Blockchain</h3>
+                    <p>Contrato é implantado em uma rede blockchain descentralizada</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Execução Automática</h3>
+                    <p>Cláusulas são executadas automaticamente quando condições são atendidas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2><i class="fas fa-star"></i> Vantagens dos Contratos Inteligentes</h2>
+
+            <div class="step-box">
+                <div class="step-number">1</div>
+                <h3>Segurança e Imutabilidade</h3>
+                <p><strong>Registros invioláveis:</strong> Uma vez implantados no blockchain, os contratos não podem ser alterados, garantindo a integridade do acordo.</p>
+                <ul>
+                    <li>✅ Proteção contra fraudes e adulterações</li>
+                    <li>✅ Registro permanente e transparente</li>
+                    <li>✅ Redução de litígios sobre os termos</li>
+                </ul>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">2</div>
+                <h3>Eliminação de Intermediários</h3>
+                <p><strong>Redução de custos e tempo:</strong> Não há necessidade de cartórios, bancos ou outros intermediários para validar e executar o contrato.</p>
+                <ul>
+                    <li>✅ Economia em taxas de intermediação</li>
+                    <li>✅ Processos mais ágeis e eficientes</li>
+                    <li>✅ Autonomia nas transações</li>
+                </ul>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">3</div>
+                <h3>Transparência Total</h3>
+                <p><strong>Todas as partes veem a mesma informação:</strong> O registro distribuído do blockchain garante que todas as partes tenham acesso às mesmas informações.</p>
+                <ul>
+                    <li>✅ Redução de assimetria de informação</li>
+                    <li>✅ Auditoria facilitada</li>
+                    <li>✅ Confiança entre as partes</li>
+                </ul>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">4</div>
+                <h3>Execução Automática e Precisão</h3>
+                <p><strong>O cumprimento é automático:</strong> Elimina a necessidade de acompanhamento manual e reduz erros humanos.</p>
+                <ul>
+                    <li>✅ Pagamentos automáticos</li>
+                    <li>✅ Liberação automática de produtos/serviços</li>
+                    <li>✅ Cumprimento exato dos termos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2><i class="fas fa-industry"></i> Aplicações Práticas para Empresas</h2>
+
+            <div class="use-case-grid">
+                <div class="use-case-item">
+                    <h4><i class="fas fa-truck"></i> Cadeia de Suprimentos</h4>
+                    <p>Pagamento automático upon entrega e recebimento de mercadorias</p>
+                </div>
+                <div class="use-case-item">
+                    <h4><i class="fas fa-home"></i> Contratos de Aluguel</h4>
+                    <p>Liberação de chaves upon pagamento do aluguel e caução</p>
+                </div>
+                <div class="use-case-item">
+                    <h4><i class="fas fa-copyright"></i> Propriedade Intelectual</h4>
+                    <p>Pagamento de royalties automáticos upon uso de conteúdo</p>
+                </div>
+                <div class="use-case-item">
+                    <h4><i class="fas fa-handshake"></i> Parcerias Empresariais</h4>
+                    <p>Distribuição automática de lucros conforme acordo</p>
+                </div>
+                <div class="use-case-item">
+                    <h4><i class="fas fa-user-tie"></i> Contratação de Serviços</h4>
+                    <p>Pagamento upon conclusão e aprovação de etapas do projeto</p>
+                </div>
+                <div class="use-case-item">
+                    <h4><i class="fas fa-shield-alt"></i> Seguros</h4>
+                    <p>Pagamento automático de indenizações upon ocorrência de sinistros</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2><i class="fas fa-exclamation-circle"></i> Desafios e Considerações Legais</h2>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-balance-scale"></i> Validade Jurídica</h4>
+                <p><strong>Os contratos inteligentes são válidos?</strong> Sim, desde que atendam aos requisitos legais de um contrato tradicional: agente capaz, objeto lícito e forma prescrita ou não defesa em lei.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-bug"></i> Vulnerabilidades Técnicas</h4>
+                <p><strong>O código é lei:</strong> Erros de programação podem levar a execuções indesejadas. É essencial auditoria de código e testes rigorosos.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-gavel"></i> Regulamentação</h4>
+                <p><strong>Marco legal em evolução:</strong> A legislação sobre blockchain e contratos inteligentes ainda está em desenvolvimento no Brasil e no mundo.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-sync-alt"></i> Imutabilidade</h4>
+                <p><strong>O que acontece se houver um erro?</strong> A imutabilidade do blockchain torna difícil corrigir contratos com falhas. É crucial planejar mecanismos de atualização e resolução de disputas.</p>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2><i class="fas fa-play-circle"></i> Como Implementar em Sua Empresa</h2>
+
+            <div class="info-box">
+                <h4><i class="fas fa-search"></i> Etapa 1: Identifique Casos de Uso</h4>
+                <p>Comece com processos repetitivos, de baixo risco e alto volume. Exemplos: pagamentos recorrentes, liberação de acessos, contratos padronizados.</p>
+            </div>
+
+            <div class="info-box">
+                <h4><i class="fas fa-pencil-alt"></i> Etapa 2: Desenvolva o Contrato</h4>
+                <p>Trabalhe com desenvolvedores especializados em blockchain e advogados para criar um contrato seguro e juridicamente válido.</p>
+            </div>
+
+            <div class="info-box">
+                <h4><i class="fas fa-vial"></i> Etapa 3: Testes Rigorosos</h4>
+                <p>Execute o contrato em ambiente de teste (testnet) para identificar e corrigir possíveis falhas antes da implantação definitiva.</p>
+            </div>
+
+            <div class="info-box">
+                <h4><i class="fas fa-rocket"></i> Etapa 4: Implantação e Monitoramento</h4>
+                <p>Implante o contrato na rede principal (mainnet) e monitore seu funcionamento, preparado para intervir se necessário.</p>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2><i class="fas fa-crystal-ball"></i> O Futuro dos Contratos Inteligentes</h2>
+
+            <p><strong>Tendências que moldarão o futuro:</strong></p>
+            <ul>
+                <li><strong>Oracles:</strong> Integração com dados do mundo real para expandir as aplicações</li>
+                <li><strong>IA Integrada:</strong> Contratos que aprendem e se adaptam automaticamente</li>
+                <li><strong>Interoperabilidade:</strong> Contratos que conversam entre diferentes blockchains</li>
+                <li><strong>Regulação Específica:</strong> Marco legal dedicado a contratos inteligentes</li>
+                <li><strong>Adoção Massiva:</strong> Uso em contratos do dia a dia, como aluguel e serviços</li>
+            </ul>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="article-cta">
+            <h2>Pronto para Explorar Contratos Inteligentes?</h2>
+            <p>Como advogado especializado em direito digital e inovação, posso ajudar sua empresa a implementar contratos inteligentes de forma segura e juridicamente válida.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="index.html#contact" class="btn btn-primary">
+                    <span>Consultoria Especializada</span>
+                    <i class="fas fa-rocket"></i>
+                </a>
+                <a href="https://wa.me/5571996510966?text=Olá! Tenho interesse em contratos inteligentes para minha empresa." class="btn btn-secondary" target="_blank">
+                    <span>Conversar no WhatsApp</span>
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation-buttons">
+            <a href="artigo-direito-digital-protecao.html" class="nav-button prev">
+                <i class="fas fa-arrow-left"></i>
+                <span>Artigo Anterior</span>
+            </a>
+            <a href="artigos.html" class="nav-button next">
+                <span>Voltar para Artigos</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Dr.Reginaldo</span>
+                    </div>
+                    <p>Excelência em advocacia empresarial estratégica</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navegação</h4>
+                        <a href="index.html">Início</a>
+                        <a href="index.html#about">Sobre</a>
+                        <a href="index.html#services">Serviços</a>
+                        <a href="artigos.html">Artigos</a>
+                        <a href="index.html#contact">Contato</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="politica-privacidade.html">Política de Privacidade</a>
+                        <a href="termos-uso.html">Termos de Uso</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Contato</h4>
+                        <a href="tel:+5571996510966">(71) 99651-0966</a>
+                        <a href="mailto:contato@advogadonomade.com.br">contato@advogadonomade.com.br</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Reginaldo - Advogado. Todos os direitos reservados.</p>
+                <p>OAB/SC 57.879</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5571996510966?text=Olá! Li seu artigo sobre contratos inteligentes e gostaria de mais informações." class="whatsapp-float" target="_blank" title="Contratos Inteligentes">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
