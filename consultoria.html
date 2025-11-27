@@ -1,30 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade</title>
     <meta name="description" content="Consultoria jurídica premium para empresas. LGPD, compliance digital, direito empresarial estratégico. Soluções personalizadas e resultados mensuráveis. OAB/SC 57.879">
-    <meta name="keywords" content="consultoria jurídica, advogado empresarial, LGPD, compliance digital, direito empresarial, advogado nômade, OAB SC 57.879">
-    <meta name="author" content="Dr. Reginaldo">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.advogadonomade.com.br/consultoria.html">
-    <meta property="og:title" content="Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade">
-    <meta property="og:description" content="Consultoria jurídica premium para empresas. LGPD, compliance digital, direito empresarial estratégico.">
-    <meta property="og:image" content="https://www.advogadonomade.com.br/assets/og-image-consultoria.jpg">
-    <meta property="og:site_name" content="Dr. Reginaldo - Advogado Nômade">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Consultoria Jurídica Estratégica | Dr. Reginaldo">
-    <meta name="twitter:description" content="Consultoria jurídica premium para empresas com foco em LGPD e compliance digital.">
-    <meta name="twitter:image" content="https://www.advogadonomade.com.br/assets/og-image-consultoria.jpg">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.advogadonomade.com.br/consultoria.html">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
@@ -39,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* ESTILOS ESPECÍFICOS DA CONSULTORIA - MANTENDO HARMONIA */
+        /* ESTILOS ESPECÍFICOS DA CONSULTORIA - MANTENDO HARMONIA TOTAL */
         .consulting-hero {
             background: var(--gradient);
             color: white;
@@ -83,13 +63,13 @@
             margin-bottom: 2rem;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
+            /* ANIMAÇÃO RESTAURADA */
             animation: float 3s ease-in-out infinite;
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
+            0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
         }
 
         .title-highlight {
@@ -158,7 +138,6 @@
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow);
-            color: var(--text-primary);
         }
 
         .package-card.featured {
@@ -218,7 +197,6 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--text-primary);
         }
 
         .package-features li:last-child {
@@ -239,7 +217,6 @@
         .process-step {
             text-align: center;
             padding: 2rem;
-            color: var(--text-primary);
         }
 
         .step-number {
@@ -264,7 +241,6 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--shadow);
-            color: var(--text-primary);
         }
 
         .comparison-table th,
@@ -284,7 +260,6 @@
             text-align: left;
             font-weight: 600;
             background: var(--bg-secondary);
-            color: var(--text-primary);
         }
 
         .check-mark {
@@ -310,13 +285,11 @@
             border-radius: 15px;
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow);
-            color: var(--text-primary);
         }
 
         .faq-question {
             font-weight: 600;
             margin-bottom: 1rem;
-            color: var(--text-primary);
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -361,7 +334,6 @@
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
@@ -370,12 +342,6 @@
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
         }
 
         .final-cta {
@@ -391,25 +357,6 @@
 
         .final-cta .section-subtitle {
             color: rgba(255, 255, 255, 0.9);
-        }
-
-        /* CORREÇÃO ESPECÍFICA PARA TEXTOS INVISÍVEIS */
-        .package-card h3,
-        .package-card p,
-        .package-features li,
-        .process-step h3,
-        .process-step p,
-        .faq-item p,
-        .comparison-table td {
-            color: var(--text-primary) !important;
-        }
-
-        .comparison-table th {
-            color: white !important;
-        }
-
-        .comparison-table .feature-name {
-            color: var(--text-primary) !important;
         }
 
         .hero-actions {
@@ -465,16 +412,22 @@
         <i class="fas fa-moon"></i>
     </div>
 
-    <!-- Header - IDÊNTICO ao da página inicial -->
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-text">DR. REGINALDO</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Header - EXATAMENTE IGUAL à página inicial -->
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <div class="logo">
-                        <i class="fas fa-balance-scale"></i>
-                        <span>Dr.Reginaldo</span>
-                    </div>
-                </a>
+                <div class="logo">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Dr.Reginaldo</span>
+                </div>
             </div>
             
             <div class="nav-menu" id="navMenu">
@@ -484,6 +437,7 @@
                 <a href="consultoria.html" class="nav-link active">Consultoria</a>
                 <a href="artigos.html" class="nav-link">Artigos</a>
                 <a href="documentos.html" class="nav-link">Documentos</a>
+                <a href="index.html#experience" class="nav-link">Experiência</a>
                 <a href="index.html#contact" class="nav-link">Contato</a>
             </div>
 
@@ -502,7 +456,7 @@
         </nav>
     </header>
 
-    <!-- Consulting Hero - Estilo idêntico à página inicial -->
+    <!-- Consulting Hero -->
     <section class="consulting-hero">
         <div class="container">
             <div class="hero-badge">
@@ -852,7 +806,7 @@
         </div>
     </section>
 
-    <!-- Footer - IDÊNTICO ao da página inicial -->
+    <!-- Footer - EXATAMENTE IGUAL à página inicial -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -867,20 +821,18 @@
                 <div class="footer-links">
                     <div class="link-group">
                         <h4>Navegação</h4>
-                        <a href="index.html">Início</a>
-                        <a href="index.html#about">Sobre</a>
-                        <a href="index.html#services">Serviços</a>
-                        <a href="consultoria.html">Consultoria</a>
-                        <a href="artigos.html">Artigos</a>
-                        <a href="index.html#contact">Contato</a>
+                        <a href="#home">Início</a>
+                        <a href="#about">Sobre</a>
+                        <a href="#services">Serviços</a>
+                        <a href="#contact">Contato</a>
                     </div>
 
                     <div class="link-group">
-                        <h4>Consultorias</h4>
-                        <a href="#packages">Consultoria Express</a>
-                        <a href="#packages">Consultoria Estratégica</a>
-                        <a href="#packages">Compliance Contínuo</a>
-                        <a href="#packages">LGPD Urgente</a>
+                        <h4>Serviços</h4>
+                        <a href="#services">Direito Empresarial</a>
+                        <a href="#services">Compliance Digital</a>
+                        <a href="#services">Contratos</a>
+                        <a href="#services">LGPD</a>
                     </div>
 
                     <div class="link-group">
@@ -899,7 +851,7 @@
     </footer>
 
     <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5571996510966?text=Olá! Gostaria de informações sobre consultoria jurídica." class="whatsapp-float" target="_blank" title="Consultoria Jurídica">
+    <a href="https://wa.me/5571996510966?text=Olá! Gostaria de mais informações sobre consultoria jurídica." class="whatsapp-float" target="_blank" title="Fale comigo no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -916,8 +868,8 @@
             const animateNumbers = () => {
                 statNumbers.forEach(stat => {
                     const target = parseInt(stat.getAttribute('data-count'));
-                    const duration = 2000; // 2 segundos
-                    const step = target / (duration / 16); // 60fps
+                    const duration = 2000;
+                    const step = target / (duration / 16);
                     let current = 0;
                     
                     const timer = setInterval(() => {
@@ -928,7 +880,6 @@
                         }
                         
                         if (target === 2) {
-                            // Caso especial para "2 milhões"
                             stat.textContent = "2M+";
                             clearInterval(timer);
                         } else {
@@ -950,7 +901,7 @@
             
             observer.observe(document.querySelector('.consulting-stats'));
             
-            // Menu hamburguer funcionando
+            // Menu hamburguer funcionando - usando o mesmo código da página inicial
             const hamburger = document.getElementById('hamburger');
             const navMenu = document.getElementById('navMenu');
             
