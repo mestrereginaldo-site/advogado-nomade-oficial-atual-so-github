@@ -19,179 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* CORREÇÕES ESPECÍFICAS PARA OS PROBLEMAS DE VISIBILIDADE */
+        /* CORREÇÕES DEFINITIVAS - MANTENDO HARMONIA COM O SITE */
         
-        /* 1. CORREÇÃO DA TABELA DE COMPARAÇÃO */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 3rem 0;
-            background: var(--bg-card);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1.5rem;
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-
-        .comparison-table th {
-            background: var(--primary-color);
-            color: white;
-            font-weight: 600;
-        }
-
-        .comparison-table .feature-name {
-            text-align: left;
-            font-weight: 600;
-            background: var(--bg-secondary);
-            color: var(--text-primary) !important;
-        }
-
-        /* CORREÇÃO CRÍTICA: Garantir que todo texto na tabela seja visível */
-        .comparison-table td {
-            color: var(--text-primary) !important;
-            background: var(--bg-card) !important;
-        }
-
-        .check-mark {
-            color: #27ae60;
-            font-size: 1.2rem;
-        }
-
-        .cross-mark {
-            color: #e74c3c;
-            font-size: 1.2rem;
-        }
-
-        /* 2. CORREÇÃO DOS CARDS DE ESTATÍSTICAS */
-        .consulting-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: var(--transition);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--gold-color);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
-            color: white !important;
-            font-weight: 500;
-        }
-
-        /* 3. CORREÇÃO DOS CARDS DE PLANOS */
-        .package-card {
-            background: var(--bg-card);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .package-card h3 {
-            color: var(--text-primary) !important;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .package-card p {
-            color: var(--text-secondary) !important;
-            margin-bottom: 1.5rem;
-        }
-
-        .package-features li {
-            color: var(--text-primary) !important;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .package-price {
-            color: var(--text-primary) !important;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 1rem 0;
-        }
-
-        .package-price .period {
-            color: var(--text-secondary) !important;
-            font-size: 1rem;
-        }
-
-        /* 4. CORREÇÃO DAS SEÇÕES DE TEXTO */
-        .section-title {
-            color: var(--text-primary) !important;
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            color: var(--text-secondary) !important;
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .process-step h3 {
-            color: var(--text-primary) !important;
-            margin-bottom: 1rem;
-        }
-
-        .process-step p {
-            color: var(--text-secondary) !important;
-        }
-
-        .faq-question {
-            color: var(--text-primary) !important;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .faq-item p {
-            color: var(--text-secondary) !important;
-            line-height: 1.6;
-        }
-
-        /* ESTILOS BASE (mantendo o original) */
+        /* 1. HERO SECTION - Mantendo igual à página inicial */
         .consulting-hero {
             background: var(--gradient);
             color: white;
@@ -258,11 +88,79 @@
             color: white;
         }
 
+        /* 2. STATS - Melhorando contraste */
+        .consulting-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gold-color);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: white !important;
+            opacity: 0.95;
+        }
+
+        /* 3. PACKAGES - Usando mesmo estilo da página inicial */
         .packages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin: 4rem 0;
+        }
+
+        .package-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .package-card h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .package-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
         }
 
         .package-card.featured {
@@ -297,11 +195,32 @@
             margin-bottom: 1.5rem;
         }
 
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 1rem 0;
+        }
+
+        .package-price .period {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
         .package-features {
             list-style: none;
             padding: 0;
             margin: 2rem 0;
             text-align: left;
+        }
+
+        .package-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
         }
 
         .package-features li:last-child {
@@ -312,6 +231,80 @@
             color: #27ae60;
         }
 
+        /* 4. URGENCY BANNER - Substituindo por algo mais profissional */
+        .urgency-banner {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid #e74c3c;
+        }
+
+        .urgency-banner h3 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: var(--text-primary);
+        }
+
+        .urgency-banner p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* 5. COMPARISON TABLE - Correção definitiva */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            background: var(--bg-card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .comparison-table .feature-name {
+            text-align: left;
+            font-weight: 600;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 1.5rem;
+        }
+
+        .comparison-table td {
+            color: var(--text-primary);
+            background: var(--bg-card);
+            font-weight: 500;
+        }
+
+        .check-mark {
+            color: #27ae60;
+            font-size: 1.2rem;
+        }
+
+        .cross-mark {
+            color: #e74c3c;
+            font-size: 1.2rem;
+        }
+
+        /* 6. PROCESS STEPS - Mantendo consistência */
         .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -322,6 +315,18 @@
         .process-step {
             text-align: center;
             padding: 2rem;
+        }
+
+        .process-step h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
 
         .step-number {
@@ -338,6 +343,7 @@
             margin: 0 auto 1.5rem;
         }
 
+        /* 7. FAQ - Estilo consistente */
         .faq-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -353,29 +359,74 @@
             box-shadow: var(--shadow);
         }
 
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+
         .faq-question i {
             color: var(--gold-color);
         }
 
-        .urgency-banner {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        .faq-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* 8. FINAL CTA - Usando o gradiente principal */
+        .final-cta {
+            background: var(--gradient);
             color: white;
-            padding: 3rem;
-            border-radius: 20px;
+            padding: 5rem 0;
             text-align: center;
-            margin: 4rem 0;
-            box-shadow: var(--shadow);
         }
 
-        .urgency-banner h3 {
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
+        .final-cta .section-title {
             color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
-        .urgency-banner p {
+        .final-cta .section-subtitle {
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 9. SEÇÃO HEADERS - Padronizando */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* 10. BOTÕES E ELEMENTOS INTERATIVOS */
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .guarantee-badge {
@@ -388,36 +439,10 @@
             border-radius: 50px;
             margin: 2rem 0;
             border: 1px solid #27ae60;
+            font-weight: 500;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .final-cta {
-            background: var(--gradient);
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
-
-        .final-cta .section-title {
-            color: white !important;
-        }
-
-        .final-cta .section-subtitle {
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
+        /* RESPONSIVIDADE */
         @media (max-width: 768px) {
             .consulting-hero {
                 padding: 6rem 1rem 3rem;
@@ -443,6 +468,11 @@
                 font-size: 0.8rem;
             }
 
+            .comparison-table th,
+            .comparison-table td {
+                padding: 1rem;
+            }
+
             .faq-grid {
                 grid-template-columns: 1fr;
             }
@@ -450,6 +480,29 @@
             .hero-actions {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .consulting-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .consulting-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
             }
         }
     </style>
@@ -657,14 +710,16 @@
     </section>
 
     <!-- Urgency Banner -->
-    <section class="urgency-banner">
+    <section class="services" style="padding: 2rem 0; background: var(--bg-secondary);">
         <div class="container">
-            <h3>⚠️ LGPD: O Prazo Está Acabando!</h3>
-            <p>Multas da ANPD já estão sendo aplicadas. Proteja seu negócio antes que seja tarde demais.</p>
-            <a href="https://wa.me/5571996510966?text=URGENTE! Preciso de ajuda com LGPD agora!" class="btn btn-secondary" target="_blank">
-                <span>Consultoria LGPD Urgente</span>
-                <i class="fas fa-exclamation-triangle"></i>
-            </a>
+            <div class="urgency-banner">
+                <h3>⚠️ LGPD: O Prazo Está Acabando!</h3>
+                <p>Multas da ANPD já estão sendo aplicadas. Proteja seu negócio antes que seja tarde demais.</p>
+                <a href="https://wa.me/5571996510966?text=URGENTE! Preciso de ajuda com LGPD agora!" class="btn btn-primary" target="_blank">
+                    <span>Consultoria LGPD Urgente</span>
+                    <i class="fas fa-exclamation-triangle"></i>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -852,7 +907,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <p style="opacity: 0.9;"><strong>⚠️ Vagas Limitadas:</strong> Apenas 5 consultorias por mês para garantir qualidade máxima</p>
+                <p style="opacity: 0.9; color: white;"><strong>⚠️ Vagas Limitadas:</strong> Apenas 5 consultorias por mês para garantir qualidade máxima</p>
             </div>
         </div>
     </section>
@@ -934,7 +989,7 @@
                             stat.textContent = "2M+";
                             clearInterval(timer);
                         } else {
-                            stat.textContent = Math.floor(current);
+                            stat.textContent = Math.floor(current) + (target === 98 ? '%' : '+');
                         }
                     }, 16);
                 });
