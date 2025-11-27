@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade</title>
     <meta name="description" content="Consultoria jurídica premium para empresas. LGPD, compliance digital, direito empresarial estratégico. Soluções personalizadas e resultados mensuráveis. OAB/SC 57.879">
+    <meta name="keywords" content="consultoria jurídica, advogado empresarial, LGPD, compliance digital, direito empresarial, advogado nômade, OAB SC 57.879">
+    <meta name="author" content="Dr. Reginaldo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.advogadonomade.com.br/consultoria.html">
+    <meta property="og:title" content="Consultoria Jurídica Estratégica | Dr. Reginaldo - Advogado Nômade">
+    <meta property="og:description" content="Consultoria jurídica premium para empresas. LGPD, compliance digital, direito empresarial estratégico.">
+    <meta property="og:image" content="https://www.advogadonomade.com.br/assets/og-image-consultoria.jpg">
+    <meta property="og:site_name" content="Dr. Reginaldo - Advogado Nômade">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Consultoria Jurídica Estratégica | Dr. Reginaldo">
+    <meta name="twitter:description" content="Consultoria jurídica premium para empresas com foco em LGPD e compliance digital.">
+    <meta name="twitter:image" content="https://www.advogadonomade.com.br/assets/og-image-consultoria.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.advogadonomade.com.br/consultoria.html">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
@@ -19,36 +39,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* VARIÁVEIS DE COR EXATAMENTE IGUAIS À PÁGINA INICIAL */
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --gold-color: #e94560;
-            --text-primary: #2c3e50;
-            --text-secondary: #7f8c8d;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8f9fa;
-            --bg-card: #ffffff;
-            --border-color: #e1e8ed;
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
-            --gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-            --transition: all 0.3s ease;
-        }
-
-        [data-theme="dark"] {
-            --primary-color: #ecf0f1;
-            --accent-color: #3498db;
-            --gold-color: #e94560;
-            --text-primary: #ecf0f1;
-            --text-secondary: #bdc3c7;
-            --bg-primary: #1a1a1a;
-            --bg-secondary: #2d3436;
-            --bg-card: #2d3436;
-            --border-color: #34495e;
-            --shadow: 0 10px 30px rgba(0,0,0,0.3);
-            --gradient: linear-gradient(135deg, var(--gold-color) 0%, var(--accent-color) 100%);
-        }
-
         /* ESTILOS ESPECÍFICOS DA PÁGINA DE CONSULTORIA */
         .consulting-hero {
             background: var(--gradient);
@@ -82,7 +72,7 @@
             line-height: 1.2;
         }
 
-        .hero-badge {
+        .consulting-hero .hero-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
             color: white;
@@ -95,12 +85,12 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .title-highlight {
+        .consulting-hero .title-highlight {
             color: var(--gold-color);
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        .hero-description {
+        .consulting-hero .hero-description {
             font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto 3rem;
@@ -356,26 +346,26 @@
             border: 1px solid #27ae60;
         }
 
-        .section-header {
+        .consulting-section-header {
             text-align: center;
             margin-bottom: 3rem;
         }
 
-        .section-title {
+        .consulting-section-title {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
-        .section-subtitle {
+        .consulting-section-subtitle {
             font-size: 1.2rem;
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
         }
 
-        .container {
+        .consulting-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
@@ -388,16 +378,16 @@
             text-align: center;
         }
 
-        .final-cta .section-title {
+        .final-cta .consulting-section-title {
             color: white;
         }
 
-        .final-cta .section-subtitle {
+        .final-cta .consulting-section-subtitle {
             color: rgba(255, 255, 255, 0.9);
         }
 
         /* BOTÕES ANIMADOS E COLORIDOS - IGUAL À PÁGINA INICIAL */
-        .btn {
+        .consulting-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
@@ -413,7 +403,7 @@
             overflow: hidden;
         }
 
-        .btn::before {
+        .consulting-btn::before {
             content: '';
             position: absolute;
             top: 0;
@@ -424,29 +414,29 @@
             transition: left 0.5s;
         }
 
-        .btn:hover::before {
+        .consulting-btn:hover::before {
             left: 100%;
         }
 
-        .btn-primary {
+        .consulting-btn-primary {
             background: var(--gold-color);
             color: white;
             box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
         }
 
-        .btn-primary:hover {
+        .consulting-btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(233, 69, 96, 0.4);
             background: #d63c58;
         }
 
-        .btn-secondary {
+        .consulting-btn-secondary {
             background: transparent;
             color: white;
             border: 2px solid white;
         }
 
-        .btn-secondary:hover {
+        .consulting-btn-secondary:hover {
             background: white;
             color: var(--primary-color);
             transform: translateY(-3px);
@@ -472,7 +462,7 @@
             color: var(--text-primary) !important;
         }
 
-        .hero-actions {
+        .consulting-hero-actions {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
@@ -489,7 +479,7 @@
                 font-size: 2.2rem;
             }
 
-            .hero-description {
+            .consulting-hero .hero-description {
                 font-size: 1.1rem;
             }
 
@@ -509,7 +499,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero-actions {
+            .consulting-hero-actions {
                 flex-direction: column;
                 align-items: center;
             }
@@ -564,7 +554,7 @@
 
     <!-- Consulting Hero - Estilo idêntico à página inicial -->
     <section class="consulting-hero">
-        <div class="container">
+        <div class="consulting-container">
             <div class="hero-badge">
                 <span>Consultoria Jurídica Premium</span>
             </div>
@@ -595,12 +585,12 @@
                 </div>
             </div>
 
-            <div class="hero-actions">
-                <a href="#packages" class="btn btn-primary">
+            <div class="consulting-hero-actions">
+                <a href="#packages" class="consulting-btn consulting-btn-primary">
                     <span>Ver Planos de Consultoria</span>
                     <i class="fas fa-arrow-down"></i>
                 </a>
-                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de uma consultoria urgente sobre LGPD." class="btn btn-secondary" target="_blank">
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de uma consultoria urgente sobre LGPD." class="consulting-btn consulting-btn-secondary" target="_blank">
                     <span>LGPD Urgente</span>
                     <i class="fab fa-whatsapp"></i>
                 </a>
@@ -610,10 +600,10 @@
 
     <!-- Packages Section -->
     <section id="packages" class="services" style="padding: 5rem 0; background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Planos de Consultoria</h2>
-                <p class="section-subtitle">Escolha a solução ideal para o momento do seu negócio</p>
+        <div class="consulting-container">
+            <div class="consulting-section-header">
+                <h2 class="consulting-section-title">Planos de Consultoria</h2>
+                <p class="consulting-section-subtitle">Escolha a solução ideal para o momento do seu negócio</p>
             </div>
 
             <div class="packages-grid">
@@ -638,7 +628,7 @@
                         <li><i class="fas fa-check"></i> Suporte 15 dias</li>
                     </ul>
 
-                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Express por R$ 1.497" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Express por R$ 1.497" class="consulting-btn consulting-btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
                         <span>Contratar Agora</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -667,7 +657,7 @@
                         <li><i class="fas fa-check"></i> Suporte 60 dias</li>
                     </ul>
 
-                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Estratégica por R$ 3.997" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Estratégica por R$ 3.997" class="consulting-btn consulting-btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
                         <span>Contratar Agora</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -695,7 +685,7 @@
                         <li><i class="fas fa-check"></i> Consultoria 24/7</li>
                     </ul>
 
-                    <a href="https://wa.me/5571996510966?text=Quero o Plano Compliance Contínuo por R$ 997/mês" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                    <a href="https://wa.me/5571996510966?text=Quero o Plano Compliance Contínuo por R$ 997/mês" class="consulting-btn consulting-btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
                         <span>Contratar Agora</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -713,10 +703,10 @@
 
     <!-- Urgency Banner -->
     <section class="urgency-banner">
-        <div class="container">
+        <div class="consulting-container">
             <h3>⚠️ LGPD: O Prazo Está Acabando!</h3>
             <p>Multas da ANPD já estão sendo aplicadas. Proteja seu negócio antes que seja tarde demais.</p>
-            <a href="https://wa.me/5571996510966?text=URGENTE! Preciso de ajuda com LGPD agora!" class="btn btn-secondary" target="_blank">
+            <a href="https://wa.me/5571996510966?text=URGENTE! Preciso de ajuda com LGPD agora!" class="consulting-btn consulting-btn-secondary" target="_blank">
                 <span>Consultoria LGPD Urgente</span>
                 <i class="fas fa-exclamation-triangle"></i>
             </a>
@@ -725,10 +715,10 @@
 
     <!-- Process Section -->
     <section class="about" style="padding: 5rem 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Como Funciona Nossa Consultoria</h2>
-                <p class="section-subtitle">Metodologia exclusiva com resultados comprovados</p>
+        <div class="consulting-container">
+            <div class="consulting-section-header">
+                <h2 class="consulting-section-title">Como Funciona Nossa Consultoria</h2>
+                <p class="consulting-section-subtitle">Metodologia exclusiva com resultados comprovados</p>
             </div>
 
             <div class="process-steps">
@@ -758,10 +748,10 @@
 
     <!-- Comparison Section -->
     <section class="services" style="padding: 5rem 0; background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Compare os Planos</h2>
-                <p class="section-subtitle">Escolha a solução perfeita para suas necessidades</p>
+        <div class="consulting-container">
+            <div class="consulting-section-header">
+                <h2 class="consulting-section-title">Compare os Planos</h2>
+                <p class="consulting-section-subtitle">Escolha a solução perfeita para suas necessidades</p>
             </div>
 
             <table class="comparison-table">
@@ -829,10 +819,10 @@
 
     <!-- FAQ Section -->
     <section class="about" style="padding: 5rem 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Perguntas Frequentes</h2>
-                <p class="section-subtitle">Tire suas dúvidas sobre nossa consultoria</p>
+        <div class="consulting-container">
+            <div class="consulting-section-header">
+                <h2 class="consulting-section-title">Perguntas Frequentes</h2>
+                <p class="consulting-section-subtitle">Tire suas dúvidas sobre nossa consultoria</p>
             </div>
 
             <div class="faq-grid">
@@ -889,18 +879,18 @@
 
     <!-- Final CTA Section -->
     <section class="final-cta">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Pronto para Transformar Seu Negócio?</h2>
-                <p class="section-subtitle">Agende uma consultoria estratégica sem compromisso</p>
+        <div class="consulting-container">
+            <div class="consulting-section-header">
+                <h2 class="consulting-section-title">Pronto para Transformar Seu Negócio?</h2>
+                <p class="consulting-section-subtitle">Agende uma consultoria estratégica sem compromisso</p>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de agendar uma consultoria estratégica." class="btn btn-primary" style="margin: 0.5rem;" target="_blank">
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de agendar uma consultoria estratégica." class="consulting-btn consulting-btn-primary" style="margin: 0.5rem;" target="_blank">
                     <span>WhatsApp Rápido</span>
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="index.html#contact" class="btn btn-secondary" style="margin: 0.5rem; background: transparent; color: white; border: 2px solid white;">
+                <a href="index.html#contact" class="consulting-btn consulting-btn-secondary" style="margin: 0.5rem; background: transparent; color: white; border: 2px solid white;">
                     <span>Formulário de Contato</span>
                     <i class="fas fa-envelope"></i>
                 </a>
@@ -1009,40 +999,6 @@
             }, { threshold: 0.5 });
             
             observer.observe(document.querySelector('.consulting-stats'));
-            
-            // Tema toggle functionality
-            const themeToggle = document.getElementById('themeToggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    const currentTheme = document.documentElement.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    document.documentElement.setAttribute('data-theme', newTheme);
-                    
-                    // Atualizar ícone
-                    const icon = this.querySelector('i');
-                    if (newTheme === 'dark') {
-                        icon.classList.remove('fa-moon');
-                        icon.classList.add('fa-sun');
-                    } else {
-                        icon.classList.remove('fa-sun');
-                        icon.classList.add('fa-moon');
-                    }
-                    
-                    // Salvar preferência
-                    localStorage.setItem('theme', newTheme);
-                });
-            }
-            
-            // Verificar tema salvo
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-                const icon = themeToggle.querySelector('i');
-                if (savedTheme === 'dark') {
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
-                }
-            }
         });
     </script>
 </body>
