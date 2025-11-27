@@ -19,7 +19,179 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* ESTILOS ESPECÍFICOS DA CONSULTORIA - CORRIGIDOS PARA AMBOS OS TEMAS */
+        /* CORREÇÕES ESPECÍFICAS PARA OS PROBLEMAS DE VISIBILIDADE */
+        
+        /* 1. CORREÇÃO DA TABELA DE COMPARAÇÃO */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            background: var(--bg-card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table .feature-name {
+            text-align: left;
+            font-weight: 600;
+            background: var(--bg-secondary);
+            color: var(--text-primary) !important;
+        }
+
+        /* CORREÇÃO CRÍTICA: Garantir que todo texto na tabela seja visível */
+        .comparison-table td {
+            color: var(--text-primary) !important;
+            background: var(--bg-card) !important;
+        }
+
+        .check-mark {
+            color: #27ae60;
+            font-size: 1.2rem;
+        }
+
+        .cross-mark {
+            color: #e74c3c;
+            font-size: 1.2rem;
+        }
+
+        /* 2. CORREÇÃO DOS CARDS DE ESTATÍSTICAS */
+        .consulting-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gold-color);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            color: white !important;
+            font-weight: 500;
+        }
+
+        /* 3. CORREÇÃO DOS CARDS DE PLANOS */
+        .package-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .package-card h3 {
+            color: var(--text-primary) !important;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .package-card p {
+            color: var(--text-secondary) !important;
+            margin-bottom: 1.5rem;
+        }
+
+        .package-features li {
+            color: var(--text-primary) !important;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .package-price {
+            color: var(--text-primary) !important;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .package-price .period {
+            color: var(--text-secondary) !important;
+            font-size: 1rem;
+        }
+
+        /* 4. CORREÇÃO DAS SEÇÕES DE TEXTO */
+        .section-title {
+            color: var(--text-primary) !important;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary) !important;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .process-step h3 {
+            color: var(--text-primary) !important;
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            color: var(--text-secondary) !important;
+        }
+
+        .faq-question {
+            color: var(--text-primary) !important;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary) !important;
+            line-height: 1.6;
+        }
+
+        /* ESTILOS BASE (mantendo o original) */
         .consulting-hero {
             background: var(--gradient);
             color: white;
@@ -50,6 +222,7 @@
             font-size: 3rem;
             margin-bottom: 1.5rem;
             line-height: 1.2;
+            color: white;
         }
 
         .hero-badge {
@@ -82,43 +255,6 @@
             margin: 0 auto 3rem;
             line-height: 1.6;
             opacity: 0.95;
-        }
-
-        .consulting-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: var(--transition);
-            color: white;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--gold-color);
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
             color: white;
         }
 
@@ -127,19 +263,6 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin: 4rem 0;
-        }
-
-        .package-card {
-            background: var(--bg-card);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            color: var(--text-primary);
         }
 
         .package-card.featured {
@@ -174,32 +297,11 @@
             margin-bottom: 1.5rem;
         }
 
-        .package-price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin: 1rem 0;
-        }
-
-        .package-price .period {
-            font-size: 1rem;
-            color: var(--text-secondary);
-        }
-
         .package-features {
             list-style: none;
             padding: 0;
             margin: 2rem 0;
             text-align: left;
-        }
-
-        .package-features li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-primary);
         }
 
         .package-features li:last-child {
@@ -220,7 +322,6 @@
         .process-step {
             text-align: center;
             padding: 2rem;
-            color: var(--text-primary);
         }
 
         .step-number {
@@ -237,47 +338,6 @@
             margin: 0 auto 1.5rem;
         }
 
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 3rem 0;
-            background: var(--bg-card);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            color: var(--text-primary);
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1.5rem;
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-
-        .comparison-table th {
-            background: var(--primary-color);
-            color: white;
-            font-weight: 600;
-        }
-
-        .comparison-table .feature-name {
-            text-align: left;
-            font-weight: 600;
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-        }
-
-        .check-mark {
-            color: #27ae60;
-            font-size: 1.2rem;
-        }
-
-        .cross-mark {
-            color: #e74c3c;
-            font-size: 1.2rem;
-        }
-
         .faq-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -291,16 +351,6 @@
             border-radius: 15px;
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow);
-            color: var(--text-primary);
-        }
-
-        .faq-question {
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-primary);
         }
 
         .faq-question i {
@@ -325,6 +375,7 @@
 
         .urgency-banner p {
             color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
         }
 
         .guarantee-badge {
@@ -344,20 +395,6 @@
             margin-bottom: 3rem;
         }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
         .final-cta {
             background: var(--gradient);
             color: white;
@@ -366,11 +403,11 @@
         }
 
         .final-cta .section-title {
-            color: white;
+            color: white !important;
         }
 
         .final-cta .section-subtitle {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.9) !important;
         }
 
         .hero-actions {
@@ -379,37 +416,6 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 2rem;
-        }
-
-        /* CORREÇÕES ESPECÍFICAS PARA VISIBILIDADE */
-        .package-card h3,
-        .package-card p {
-            color: var(--text-primary);
-        }
-
-        .process-step h3,
-        .process-step p {
-            color: var(--text-primary);
-        }
-
-        .faq-item p {
-            color: var(--text-primary);
-        }
-
-        /* Garantir que todos os textos tenham contraste adequado */
-        .comparison-table td:not(.feature-name) {
-            color: var(--text-primary);
-        }
-
-        /* Melhorar contraste para modo escuro */
-        @media (prefers-color-scheme: dark) {
-            .package-card {
-                background: var(--bg-card);
-            }
-            
-            .comparison-table .feature-name {
-                background: var(--bg-secondary);
-            }
         }
 
         @media (max-width: 768px) {
