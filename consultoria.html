@@ -12,183 +12,217 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* CORREÇÃO DEFINITIVA - CONTRASTE PERFEITO ENTRE TEMAS */
+        /* DESIGN PREMIUM - CONTRASTE PERFEITO */
         
-        /* 1. VARIÁVEIS DE CORES CONSISTENTES */
-        :root {
-            --primary-text-light: #1a202c;
-            --secondary-text-light: #2d3748;
-            --muted-text-light: #4a5568;
-            --primary-text-dark: #ffffff;
-            --secondary-text-dark: #e2e8f0;
-            --muted-text-dark: #a0aec0;
-            --accent-color: #667eea;
-            --accent-secondary: #764ba2;
-            --featured-color: #e94560;
-            --success-color: #27ae60;
-        }
-
-        [data-theme="dark"] {
-            --primary-text: var(--primary-text-dark);
-            --secondary-text: var(--secondary-text-dark);
-            --muted-text: var(--muted-text-dark);
-        }
-
-        [data-theme="light"] {
-            --primary-text: var(--primary-text-light);
-            --secondary-text: var(--secondary-text-light);
-            --muted-text: var(--muted-text-light);
-        }
-
-        /* 2. HERO SECTION - CORRIGIDO */
+        /* 1. RESET DE CORES PROFISSIONAL */
         .consulting-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: #ffffff;
             padding: 8rem 2rem 4rem;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
+        .consulting-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.03)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .consulting-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
         .consulting-hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
-            color: white;
+            line-height: 1.1;
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .hero-badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, #e53e3e, #c53030);
             color: white;
-            padding: 0.5rem 1.5rem;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
             font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            border: 2px solid rgba(255,255,255,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .title-highlight {
-            color: #f8d568;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #f6e05e, #ecc94b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
         }
 
         .hero-description {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             max-width: 800px;
             margin: 0 auto 3rem;
             line-height: 1.6;
-            opacity: 0.95;
-            color: white;
+            color: #e2e8f0;
+            font-weight: 500;
         }
 
-        /* 3. STATS - CORRIGIDO */
+        .hero-description strong {
+            color: #f6e05e;
+            font-weight: 700;
+        }
+
+        /* 2. STATS PREMIUM */
         .consulting-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
+            margin: 4rem 0;
             max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
             transition: all 0.3s ease;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #f6e05e, #ecc94b);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 3rem;
+            font-weight: 800;
             margin-bottom: 0.5rem;
-            color: #f8d568;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            color: #f6e05e;
             display: block;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .stat-label {
-            font-size: 1rem;
-            font-weight: 500;
-            color: white;
-            opacity: 0.95;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #e2e8f0;
         }
 
-        /* 4. PACOTES - CONTRASTE PERFEITO */
+        /* 3. PACOTES PREMIUM */
         .packages-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
+            padding: 6rem 0;
+            background: #ffffff;
         }
 
         [data-theme="dark"] .packages-section {
-            background: #1a1a1a;
+            background: #0f1419;
         }
 
         .packages-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
             margin: 4rem 0;
         }
 
         .package-card {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem 2rem;
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 3rem 2.5rem;
             text-align: center;
-            border: 1px solid #e9ecef;
-            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
         }
 
         [data-theme="dark"] .package-card {
-            background: #2d2d2d;
-            border: 1px solid #444;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: #1a202c;
+            border: 2px solid #2d3748;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .package-card.featured::before {
+            background: linear-gradient(135deg, #f6e05e, #ecc94b);
         }
 
         .package-card h3 {
-            color: var(--primary-text);
-            font-size: 1.5rem;
+            color: #1a202c;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
+        }
+
+        [data-theme="dark"] .package-card h3 {
+            color: #ffffff;
         }
 
         .package-card p {
-            color: var(--secondary-text);
-            margin-bottom: 1.5rem;
-            line-height: 1.5;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            line-height: 1.6;
             font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        [data-theme="dark"] .package-card p {
+            color: #e2e8f0;
         }
 
         .package-card.featured {
-            border: 2px solid #e94560;
+            border: 2px solid #f6e05e;
             transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(246, 224, 94, 0.2);
         }
 
         [data-theme="dark"] .package-card.featured {
-            border: 2px solid #f8d568;
+            box-shadow: 0 20px 60px rgba(246, 224, 94, 0.3);
         }
 
         .package-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
         }
 
         .package-card.featured:hover {
@@ -197,257 +231,203 @@
 
         .package-badge {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: #e94560;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        [data-theme="dark"] .package-badge {
-            background: #f8d568;
-            color: #2d3748;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: linear-gradient(135deg, #f6e05e, #ecc94b);
+            color: #1a202c;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(246, 224, 94, 0.3);
         }
 
         .package-icon {
-            font-size: 3rem;
-            color: #e94560;
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        [data-theme="dark"] .package-icon {
-            color: #f8d568;
+        .package-card.featured .package-icon {
+            background: linear-gradient(135deg, #f6e05e, #ecc94b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .package-price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-text);
-            margin: 1rem 0;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #1a202c;
+            margin: 2rem 0;
+            line-height: 1;
+        }
+
+        [data-theme="dark"] .package-price {
+            color: #ffffff;
         }
 
         .package-price .period {
-            font-size: 1rem;
-            color: var(--muted-text);
-            font-weight: 500;
+            font-size: 1.1rem;
+            color: #718096;
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .package-price .period {
+            color: #a0aec0;
         }
 
         .package-features {
             list-style: none;
             padding: 0;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
             text-align: left;
         }
 
         .package-features li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #e9ecef;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--secondary-text);
-            font-weight: 500;
+            gap: 1rem;
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 1rem;
         }
 
         [data-theme="dark"] .package-features li {
-            border-bottom: 1px solid #444;
+            color: #e2e8f0;
+            border-bottom: 1px solid #2d3748;
         }
 
         .package-features li i {
-            color: #27ae60;
-        }
-
-        /* 5. TABELA DE COMPARAÇÃO - CORRIGIDA */
-        .comparison-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        [data-theme="dark"] .comparison-section {
-            background: #1a1a1a;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 3rem 0;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        [data-theme="dark"] .comparison-table {
-            background: #2d2d2d;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1.5rem;
-            text-align: center;
-            border: 1px solid #e9ecef;
-        }
-
-        [data-theme="dark"] .comparison-table th,
-        [data-theme="dark"] .comparison-table td {
-            border: 1px solid #444;
-        }
-
-        .comparison-table th {
-            background: #667eea;
-            color: white;
-            font-weight: 700;
+            color: #38a169;
             font-size: 1.1rem;
         }
 
-        .comparison-table .feature-name {
-            text-align: left;
+        /* 4. BOTÕES PREMIUM */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
             font-weight: 700;
-            background: #edf2f7;
-            color: var(--primary-text);
-            padding: 1.5rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
-        [data-theme="dark"] .comparison-table .feature-name {
-            background: #2d3748;
+        .btn-primary {
+            background: linear-gradient(135deg, #e53e3e, #c53030);
+            color: white;
+            box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
         }
 
-        .comparison-table td {
-            color: var(--primary-text);
-            background: white;
-            font-weight: 600;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(229, 62, 62, 0.4);
         }
 
-        [data-theme="dark"] .comparison-table td {
-            background: #2d2d2d;
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
         }
 
-        .check-mark {
-            color: #27ae60;
-            font-size: 1.2rem;
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
         }
 
-        .cross-mark {
-            color: #e74c3c;
-            font-size: 1.2rem;
-        }
-
-        /* 6. PROCESSO STEPS - CORRIGIDO */
+        /* 5. SEÇÃO DE PROCESSO */
         .process-section {
-            padding: 5rem 0;
-            background: white;
+            padding: 6rem 0;
+            background: #f7fafc;
         }
 
         [data-theme="dark"] .process-section {
-            background: #1a1a1a;
+            background: #0f1419;
         }
 
         .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
         }
 
         .process-step {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
+            background: #ffffff;
+            border-radius: 20px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] .process-step {
+            background: #1a202c;
+            border: 2px solid #2d3748;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
 
         .process-step h3 {
-            color: var(--primary-text);
+            color: #1a202c;
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
         }
 
+        [data-theme="dark"] .process-step h3 {
+            color: #ffffff;
+        }
+
         .process-step p {
-            color: var(--secondary-text);
+            color: #4a5568;
             line-height: 1.6;
             font-weight: 500;
         }
 
+        [data-theme="dark"] .process-step p {
+            color: #e2e8f0;
+        }
+
         .step-number {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0 auto 2rem;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
         }
 
-        /* 7. FAQ - CORRIGIDO */
-        .faq-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        [data-theme="dark"] .faq-section {
-            background: #1a1a1a;
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .faq-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid #e9ecef;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        [data-theme="dark"] .faq-item {
-            background: #2d2d2d;
-            border: 1px solid #444;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .faq-question {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-text);
-            font-size: 1.1rem;
-        }
-
-        .faq-question i {
-            color: #e94560;
-        }
-
-        [data-theme="dark"] .faq-question i {
-            color: #f8d568;
-        }
-
-        .faq-item p {
-            color: var(--secondary-text);
-            line-height: 1.6;
-            font-weight: 500;
-        }
-
-        /* 8. URGENCY BANNER - CORRIGIDO */
+        /* 6. SEÇÃO URGÊNCIA */
         .urgency-section {
-            padding: 2rem 0;
-            background: #f8f9fa;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #fed7d7, #feebeb);
         }
 
         [data-theme="dark"] .urgency-section {
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #742a2a, #2d1313);
         }
 
         .urgency-banner {
@@ -455,154 +435,185 @@
             padding: 3rem;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-left: 4px solid #e74c3c;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-left: 6px solid #e53e3e;
         }
 
         [data-theme="dark"] .urgency-banner {
-            background: #2d2d2d;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: #1a202c;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
         .urgency-banner h3 {
             margin-bottom: 1rem;
-            font-size: 1.8rem;
-            color: var(--primary-text);
-            font-weight: 700;
+            font-size: 2rem;
+            color: #1a202c;
+            font-weight: 800;
+        }
+
+        [data-theme="dark"] .urgency-banner h3 {
+            color: #ffffff;
         }
 
         .urgency-banner p {
-            color: var(--secondary-text);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        /* 9. FINAL CTA - CORRIGIDO DEFINITIVAMENTE */
-        .final-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
-
-        .final-cta .section-title {
-            color: white !important;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .final-cta .section-subtitle {
-            color: rgba(255, 255, 255, 0.95) !important;
+            color: #4a5568;
+            margin-bottom: 2rem;
             font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
             font-weight: 500;
         }
 
-        /* 10. HEADERS DE SEÇÃO - CORRIGIDOS */
+        [data-theme="dark"] .urgency-banner p {
+            color: #e2e8f0;
+        }
+
+        /* 7. HEADERS PROFISSIONAIS */
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-text);
-            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1a202c;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        [data-theme="dark"] .section-title {
+            color: #ffffff;
         }
 
         .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--secondary-text);
-            max-width: 600px;
+            font-size: 1.3rem;
+            color: #4a5568;
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.6;
             font-weight: 500;
         }
 
-        /* 11. ELEMENTOS ADICIONAIS CORRIGIDOS */
-        .hero-actions {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
+        [data-theme="dark"] .section-subtitle {
+            color: #e2e8f0;
         }
 
+        /* 8. GARANTIA */
         .guarantee-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            background: rgba(39, 174, 96, 0.15);
-            color: #27ae60;
-            padding: 1rem 2rem;
+            gap: 1rem;
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+            padding: 1.5rem 3rem;
             border-radius: 50px;
-            margin: 2rem 0;
-            border: 2px solid #27ae60;
-            font-weight: 600;
-            font-size: 1rem;
+            margin: 3rem 0;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
         }
 
-        [data-theme="dark"] .guarantee-badge {
-            background: rgba(39, 174, 96, 0.2);
-            color: #2ecc71;
-            border: 2px solid #2ecc71;
+        /* 9. FINAL CTA PREMIUM */
+        .final-cta {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* RESPONSIVIDADE */
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.03)" points="0,0 1000,1000 0,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .final-cta .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta .section-title {
+            color: white !important;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .final-cta .section-subtitle {
+            color: rgba(255, 255, 255, 0.95) !important;
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+
+        /* RESPONSIVIDADE PREMIUM */
+        @media (max-width: 1024px) {
+            .consulting-hero h1 {
+                font-size: 3rem;
+            }
+            .packages-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .package-card.featured {
+                transform: none;
+            }
+        }
+
         @media (max-width: 768px) {
             .consulting-hero {
                 padding: 6rem 1rem 3rem;
             }
             .consulting-hero h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             .hero-description {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
-            .package-card.featured {
-                transform: none;
+            .section-title {
+                font-size: 2.5rem;
             }
-            .packages-grid {
-                grid-template-columns: 1fr;
+            .consulting-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
             }
-            .comparison-table {
-                font-size: 0.8rem;
+            .stat-card {
+                padding: 2rem 1rem;
             }
-            .comparison-table th,
-            .comparison-table td {
-                padding: 1rem;
-            }
-            .faq-grid {
-                grid-template-columns: 1fr;
+            .stat-number {
+                font-size: 2.5rem;
             }
             .hero-actions {
                 flex-direction: column;
                 align-items: center;
-            }
-            .consulting-stats {
-                grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
             }
-            .stat-card {
-                padding: 1.5rem 1rem;
-            }
-            .stat-number {
-                font-size: 2rem;
-            }
-            .section-title {
-                font-size: 2rem;
+            .btn {
+                width: 100%;
+                justify-content: center;
             }
         }
 
         @media (max-width: 480px) {
             .consulting-stats {
                 grid-template-columns: 1fr;
+            }
+            .consulting-hero h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .package-card {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
@@ -664,14 +675,14 @@
     <section class="consulting-hero">
         <div class="container">
             <div class="hero-badge">
-                <span>Consultoria Jurídica Premium</span>
+                <span>CONSULTORIA JURÍDICA PREMIUM</span>
             </div>
             
             <h1>Soluções Jurídicas que <span class="title-highlight">Impulsionam Seu Negócio</span></h1>
             
             <p class="hero-description">
-                Consultoria estratégica personalizada para proteger seu negócio, garantir compliance e <strong>maximizar resultados</strong>. 
-                Atendimento <strong>nômade em todo Brasil</strong> com metodologia exclusiva.
+                Consultoria estratégica personalizada para <strong>proteger seu negócio</strong>, garantir compliance e 
+                <strong>maximizar resultados</strong>. Atendimento nômade em <strong>todo o Brasil</strong> com metodologia exclusiva.
             </p>
 
             <div class="consulting-stats">
@@ -710,8 +721,8 @@
     <section id="packages" class="packages-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Planos de Consultoria</h2>
-                <p class="section-subtitle">Escolha a solução ideal para o momento do seu negócio</p>
+                <h2 class="section-title">Planos de Consultoria Premium</h2>
+                <p class="section-subtitle">Soluções jurídicas estratégicas para cada etapa do seu negócio</p>
             </div>
 
             <div class="packages-grid">
@@ -721,7 +732,7 @@
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>Consultoria Express</h3>
-                    <p>Solução rápida para urgências jurídicas</p>
+                    <p>Solução rápida e eficiente para urgências jurídicas imediatas</p>
                     
                     <div class="package-price">
                         R$ 1.497
@@ -730,10 +741,10 @@
 
                     <ul class="package-features">
                         <li><i class="fas fa-check"></i> Diagnóstico LGPD em 48h</li>
-                        <li><i class="fas fa-check"></i> 2 Sessões de Mentoria</li>
+                        <li><i class="fas fa-check"></i> 2 Sessões de Mentoria Estratégica</li>
                         <li><i class="fas fa-check"></i> Plano de Ação Prioritário</li>
-                        <li><i class="fas fa-check"></i> Checklist Compliance</li>
-                        <li><i class="fas fa-check"></i> Suporte 15 dias</li>
+                        <li><i class="fas fa-check"></i> Checklist Compliance Completo</li>
+                        <li><i class="fas fa-check"></i> Suporte Especializado 15 dias</li>
                     </ul>
 
                     <a href="https://wa.me/5571996510966?text=Quero a Consultoria Express por R$ 1.497" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
@@ -749,7 +760,7 @@
                         <i class="fas fa-chess-queen"></i>
                     </div>
                     <h3>Consultoria Estratégica</h3>
-                    <p>Proteção jurídica completa para crescimento</p>
+                    <p>Proteção jurídica completa para crescimento sustentável</p>
                     
                     <div class="package-price">
                         R$ 3.997
@@ -759,10 +770,10 @@
                     <ul class="package-features">
                         <li><i class="fas fa-check"></i> Análise Empresarial Completa</li>
                         <li><i class="fas fa-check"></i> Planejamento Jurídico 6 meses</li>
-                        <li><i class="fas fa-check"></i> 4 Sessões Mensais</li>
-                        <li><i class="fas fa-check"></i> Revisão de Contratos</li>
+                        <li><i class="fas fa-check"></i> 4 Sessões Mensais Estratégicas</li>
+                        <li><i class="fas fa-check"></i> Revisão de Contratos (até 5)</li>
                         <li><i class="fas fa-check"></i> Políticas Personalizadas</li>
-                        <li><i class="fas fa-check"></i> Suporte 60 dias</li>
+                        <li><i class="fas fa-check"></i> Suporte Prioritário 60 dias</li>
                     </ul>
 
                     <a href="https://wa.me/5571996510966?text=Quero a Consultoria Estratégica por R$ 3.997" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
@@ -777,7 +788,7 @@
                         <i class="fas fa-infinity"></i>
                     </div>
                     <h3>Compliance Contínuo</h3>
-                    <p>Proteção jurídica mensal sem preocupações</p>
+                    <p>Proteção jurídica mensal completa sem preocupações</p>
                     
                     <div class="package-price">
                         R$ 997
@@ -786,11 +797,11 @@
 
                     <ul class="package-features">
                         <li><i class="fas fa-check"></i> Suporte Jurídico Ilimitado</li>
-                        <li><i class="fas fa-check"></i> DPO Terceirizado</li>
-                        <li><i class="fas fa-check"></i> Revisão de Documentos</li>
-                        <li><i class="fas fa-check"></i> Atualização Legislativa</li>
-                        <li><i class="fas fa-check"></i> Relatórios Mensais</li>
-                        <li><i class="fas fa-check"></i> Consultoria 24/7</li>
+                        <li><i class="fas fa-check"></i> DPO Terceirizado Incluído</li>
+                        <li><i class="fas fa-check"></i> Revisão Ilimitada de Documentos</li>
+                        <li><i class="fas fa-check"></i> Atualização Legislativa Contínua</li>
+                        <li><i class="fas fa-check"></i> Relatórios Mensais Detalhados</li>
+                        <li><i class="fas fa-check"></i> Consultoria Estratégica 24/7</li>
                     </ul>
 
                     <a href="https://wa.me/5571996510966?text=Quero o Plano Compliance Contínuo por R$ 997/mês" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
@@ -803,7 +814,7 @@
             <div style="text-align: center;">
                 <div class="guarantee-badge">
                     <i class="fas fa-shield-alt"></i>
-                    <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+                    <span>GARANTIA DE 7 DIAS OU SEU DINHEIRO DE VOLTA</span>
                 </div>
             </div>
         </div>
@@ -827,161 +838,30 @@
     <section class="process-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Como Funciona Nossa Consultoria</h2>
-                <p class="section-subtitle">Metodologia exclusiva com resultados comprovados</p>
+                <h2 class="section-title">Metodologia Exclusiva</h2>
+                <p class="section-subtitle">Processo estratégico com resultados comprovados e mensuráveis</p>
             </div>
 
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <h3>Diagnóstico Completo</h3>
-                    <p>Análise detalhada da situação jurídica atual do seu negócio</p>
+                    <p>Análise detalhada da situação jurídica atual do seu negócio com identificação de riscos e oportunidades</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3>Plano Estratégico</h3>
-                    <p>Desenvolvimento de roadmap personalizado com prioridades claras</p>
+                    <p>Desenvolvimento de roadmap personalizado com prioridades claras e cronograma executivo</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Implementação</h3>
-                    <p>Execução das ações com acompanhamento próximo e suporte total</p>
+                    <p>Execução das ações com acompanhamento próximo e suporte total para garantir resultados</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Resultados Mensuráveis</h3>
-                    <p>Acompanhamento de KPIs e ajustes estratégicos contínuos</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section class="comparison-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Compare os Planos</h2>
-                <p class="section-subtitle">Escolha a solução perfeita para suas necessidades</p>
-            </div>
-
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th class="feature-name">Recursos Incluídos</th>
-                        <th>Express</th>
-                        <th>Estratégica</th>
-                        <th>Contínuo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="feature-name">Diagnóstico LGPD Completo</td>
-                        <td><i class="fas fa-check check-mark"></i></td>
-                        <td><i class="fas fa-check check-mark"></i></td>
-                        <td><i class="fas fa-check check-mark"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Sessões de Mentoria</td>
-                        <td>2 sessões</td>
-                        <td>4 sessões</td>
-                        <td>Ilimitado</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Revisão de Contratos</td>
-                        <td><i class="fas fa-times cross-mark"></i></td>
-                        <td>Até 5 contratos</td>
-                        <td>Ilimitado</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Políticas Personalizadas</td>
-                        <td>Básicas</td>
-                        <td>Completas</td>
-                        <td>Completas + Atualizações</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">DPO Terceirizado</td>
-                        <td><i class="fas fa-times cross-mark"></i></td>
-                        <td><i class="fas fa-times cross-mark"></i></td>
-                        <td><i class="fas fa-check check-mark"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Suporte por WhatsApp</td>
-                        <td>15 dias</td>
-                        <td>60 dias</td>
-                        <td>Ilimitado</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Relatórios de Compliance</td>
-                        <td><i class="fas fa-times cross-mark"></i></td>
-                        <td>Mensal</td>
-                        <td>Mensal Detalhado</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Atualização Legislativa</td>
-                        <td><i class="fas fa-times cross-mark"></i></td>
-                        <td><i class="fas fa-times cross-mark"></i></td>
-                        <td><i class="fas fa-check check-mark"></i></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Perguntas Frequentes</h2>
-                <p class="section-subtitle">Tire suas dúvidas sobre nossa consultoria</p>
-            </div>
-
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="far fa-question-circle"></i>
-                        Qual o prazo para início da consultoria?
-                    </div>
-                    <p>Iniciamos em até 24 horas após a contratação. Para casos de urgência, podemos começar no mesmo dia.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="far fa-question-circle"></i>
-                        A consultoria é presencial ou remota?
-                    </div>
-                    <p>Oferecemos ambas as modalidades. Atendimento remoto para todo Brasil e presencial nas principais capitais.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="far fa-question-circle"></i>
-                        Posso cancelar a qualquer momento?
-                    </div>
-                    <p>Sim! Oferecemos garantia de 7 dias. Para planos mensais, cancelamento sem multa com 30 dias de aviso.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="far fa-question-circle"></i>
-                        Vocês emitem nota fiscal?
-                    </div>
-                    <p>Sim, emitimos nota fiscal de serviço para todas as consultorias, ideal para dedução fiscal da empresa.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="far fa-question-circle"></i>
-                        E se eu tiver uma emergência fora do horário comercial?
-                    </div>
-                    <p>No plano Contínuo oferecemos suporte 24/7. Nos outros planos, emergências são atendidas com taxa adicional.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="far fa-question-circle"></i>
-                        Vocês atendem empresas de qualquer segmento?
-                    </div>
-                    <p>Sim! Atendemos desde startups até grandes corporações, com especialização em e-commerce, tech e serviços.</p>
+                    <p>Acompanhamento de KPIs jurídicos e ajustes estratégicos contínuos para otimização</p>
                 </div>
             </div>
         </div>
@@ -992,7 +872,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Pronto para Transformar Seu Negócio?</h2>
-                <p class="section-subtitle">Agende uma consultoria estratégica sem compromisso</p>
+                <p class="section-subtitle">Agende uma consultoria estratégica sem compromisso e garanta a segurança jurídica do seu empreendimento</p>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
@@ -1000,14 +880,16 @@
                     <span>WhatsApp Rápido</span>
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="index.html#contact" class="btn btn-secondary" style="margin: 0.5rem; background: transparent; color: white; border: 2px solid white;">
+                <a href="index.html#contact" class="btn btn-secondary" style="margin: 0.5rem;" target="_blank">
                     <span>Formulário de Contato</span>
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
 
-            <div style="text-align: center; margin-top: 2rem;">
-                <p style="opacity: 0.9; color: white; font-weight: 500;"><strong>⚠️ Vagas Limitadas:</strong> Apenas 5 consultorias por mês para garantir qualidade máxima</p>
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="opacity: 0.9; color: white; font-weight: 600; font-size: 1.1rem;">
+                    <strong>⚠️ VAGAS LIMITADAS:</strong> Apenas 5 consultorias por mês para garantir excelência e atendimento personalizado
+                </p>
             </div>
         </div>
     </section>
@@ -1104,17 +986,6 @@
             }, { threshold: 0.5 });
             
             observer.observe(document.querySelector('.consulting-stats'));
-            
-            // Menu hamburguer
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('navMenu');
-            
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', function() {
-                    navMenu.classList.toggle('active');
-                    hamburger.classList.toggle('active');
-                });
-            }
         });
     </script>
 </body>
