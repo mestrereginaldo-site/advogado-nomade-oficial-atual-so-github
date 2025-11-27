@@ -12,14 +12,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* CORREÇÕES SIMPLES E DIRETAS */
+        /* CORREÇÕES ESPECÍFICAS - CONTRASTE PERFEITO */
         
-        /* Hero Section Fix */
+        /* 1. HERO SECTION CORRIGIDA */
         .consulting-hero {
             background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
             color: white;
             padding: 8rem 2rem 4rem;
             text-align: center;
+            position: relative;
+        }
+
+        .consulting-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.03)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .consulting-hero .container {
+            position: relative;
+            z-index: 2;
         }
 
         .consulting-hero h1 {
@@ -27,20 +44,23 @@
             font-size: 3rem;
             margin-bottom: 1.5rem;
             color: white;
+            font-weight: 700;
         }
 
         .hero-badge {
             display: inline-block;
             background: #e53e3e;
             color: white;
-            padding: 0.5rem 1.5rem;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 2rem;
+            border: 2px solid rgba(255,255,255,0.2);
         }
 
         .title-highlight {
             color: #f6e05e;
+            font-weight: 700;
         }
 
         .hero-description {
@@ -48,24 +68,31 @@
             max-width: 800px;
             margin: 0 auto 3rem;
             color: #e2e8f0;
+            line-height: 1.6;
         }
 
-        /* Stats - 4 em linha com contraste forte */
+        .hero-description strong {
+            color: #f6e05e;
+        }
+
+        /* 2. STATS - 4 NA MESMA LINHA COM CONTRASTE FORTE */
         .consulting-stats {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
+            margin: 4rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .stat-card {
             background: rgba(255, 255, 255, 0.1);
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             border-radius: 15px;
             text-align: center;
-            min-width: 180px;
             border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
         }
 
         .stat-number {
@@ -74,14 +101,16 @@
             margin-bottom: 0.5rem;
             color: #f6e05e;
             display: block;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .stat-label {
             font-weight: 600;
             color: white;
+            font-size: 1rem;
         }
 
-        /* Botões centralizados */
+        /* 3. BOTÕES CENTRALIZADOS */
         .hero-actions {
             display: flex;
             gap: 1.5rem;
@@ -93,30 +122,42 @@
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
+            gap: 0.8rem;
+            padding: 1.2rem 2.5rem;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             transition: 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary {
             background: #e53e3e;
             color: white;
+            box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
             color: white;
             border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
         }
 
         .btn:hover {
             transform: translateY(-2px);
         }
 
-        /* Process Steps - 4 em linha */
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(229, 62, 62, 0.4);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* 4. PROCESS STEPS - 4 NA MESMA LINHA */
         .process-section {
             padding: 5rem 0;
             background: #f7fafc;
@@ -135,13 +176,22 @@
 
         .process-step {
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1.5rem;
+            background: white;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        [data-theme="dark"] .process-step {
+            background: #2d2d2d;
+            border: 1px solid #444;
         }
 
         .process-step h3 {
             color: #1a202c;
             margin-bottom: 1rem;
             font-weight: 700;
+            font-size: 1.3rem;
         }
 
         [data-theme="dark"] .process-step h3 {
@@ -151,6 +201,7 @@
         .process-step p {
             color: #4a5568;
             line-height: 1.5;
+            font-weight: 500;
         }
 
         [data-theme="dark"] .process-step p {
@@ -160,34 +211,442 @@
         .step-number {
             background: #667eea;
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            margin: 0 auto 1rem;
+            font-size: 1.3rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
 
-        /* Responsividade simples */
+        /* 5. PACOTES - CORES CORRETAS */
+        .packages-section {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        [data-theme="dark"] .packages-section {
+            background: #1a1a1a;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        [data-theme="dark"] .package-card {
+            background: #2d2d2d;
+            border: 1px solid #444;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .package-card h3 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        [data-theme="dark"] .package-card h3 {
+            color: #ffffff;
+        }
+
+        .package-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .package-card p {
+            color: #e2e8f0;
+        }
+
+        .package-card.featured {
+            border: 2px solid #e94560;
+            transform: scale(1.05);
+        }
+
+        [data-theme="dark"] .package-card.featured {
+            border: 2px solid #f8d568;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .package-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #e94560;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        [data-theme="dark"] .package-badge {
+            background: #f8d568;
+            color: #2d3748;
+        }
+
+        .package-icon {
+            font-size: 3rem;
+            color: #e94560;
+            margin-bottom: 1.5rem;
+        }
+
+        [data-theme="dark"] .package-icon {
+            color: #f8d568;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #2d3748;
+            margin: 1rem 0;
+        }
+
+        [data-theme="dark"] .package-price {
+            color: #ffffff;
+        }
+
+        .package-price .period {
+            font-size: 1rem;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .package-price .period {
+            color: #a0aec0;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .package-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2d3748;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .package-features li {
+            color: #ffffff;
+            border-bottom: 1px solid #444;
+        }
+
+        .package-features li i {
+            color: #27ae60;
+        }
+
+        /* 6. GARANTIA */
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: #38a169;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            margin: 2rem 0;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.3);
+        }
+
+        /* 7. URGÊNCIA */
+        .urgency-section {
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #fed7d7, #feebeb);
+        }
+
+        [data-theme="dark"] .urgency-section {
+            background: linear-gradient(135deg, #742a2a, #2d1313);
+        }
+
+        .urgency-banner {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 6px solid #e53e3e;
+        }
+
+        [data-theme="dark"] .urgency-banner {
+            background: #2d2d2d;
+        }
+
+        .urgency-banner h3 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: #1a202c;
+            font-weight: 700;
+        }
+
+        [data-theme="dark"] .urgency-banner h3 {
+            color: #ffffff;
+        }
+
+        .urgency-banner p {
+            color: #4a5568;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .urgency-banner p {
+            color: #e2e8f0;
+        }
+
+        /* 8. COMPARAÇÃO */
+        .comparison-section {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        [data-theme="dark"] .comparison-section {
+            background: #1a1a1a;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        [data-theme="dark"] .comparison-table {
+            background: #2d2d2d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        [data-theme="dark"] .comparison-table th,
+        [data-theme="dark"] .comparison-table td {
+            border: 1px solid #444;
+        }
+
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .comparison-table .feature-name {
+            text-align: left;
+            font-weight: 700;
+            background: #edf2f7;
+            color: #2d3748;
+            padding: 1.5rem;
+        }
+
+        [data-theme="dark"] .comparison-table .feature-name {
+            background: #2d3748;
+            color: #ffffff;
+        }
+
+        .comparison-table td {
+            color: #2d3748;
+            background: white;
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .comparison-table td {
+            color: #ffffff;
+            background: #2d2d2d;
+        }
+
+        .check-mark {
+            color: #27ae60;
+            font-size: 1.2rem;
+        }
+
+        .cross-mark {
+            color: #e74c3c;
+            font-size: 1.2rem;
+        }
+
+        /* 9. FAQ */
+        .faq-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        [data-theme="dark"] .faq-section {
+            background: #1a1a1a;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        [data-theme="dark"] .faq-item {
+            background: #2d2d2d;
+            border: 1px solid #444;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2d3748;
+            font-size: 1.1rem;
+        }
+
+        [data-theme="dark"] .faq-question {
+            color: #ffffff;
+        }
+
+        .faq-question i {
+            color: #e94560;
+        }
+
+        [data-theme="dark"] .faq-question i {
+            color: #f8d568;
+        }
+
+        .faq-item p {
+            color: #4a5568;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .faq-item p {
+            color: #e2e8f0;
+        }
+
+        /* 10. FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .final-cta .section-title {
+            color: white !important;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .final-cta .section-subtitle {
+            color: rgba(255, 255, 255, 0.95) !important;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+
+        /* 11. HEADERS */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        [data-theme="dark"] .section-title {
+            color: #ffffff;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .section-subtitle {
+            color: #e2e8f0;
+        }
+
+        /* RESPONSIVIDADE */
         @media (max-width: 1024px) {
+            .consulting-stats,
             .process-steps {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
+            .consulting-hero {
+                padding: 6rem 1rem 3rem;
+            }
+            
             .consulting-hero h1 {
                 font-size: 2.2rem;
             }
             
-            .consulting-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
+            .consulting-stats,
             .process-steps {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .hero-actions {
@@ -200,17 +659,47 @@
                 max-width: 300px;
                 justify-content: center;
             }
-        }
-
-        @media (max-width: 480px) {
-            .consulting-stats {
+            
+            .stat-card {
+                padding: 2rem 1rem;
+            }
+            
+            .packages-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .package-card.featured {
+                transform: none;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                font-size: 0.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header (mantenha igual ao seu original) -->
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-text">DR. REGINALDO</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
@@ -246,7 +735,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section Corrigida -->
+    <!-- Consulting Hero -->
     <section class="consulting-hero">
         <div class="container">
             <div class="hero-badge">
@@ -256,30 +745,29 @@
             <h1>Soluções Jurídicas que <span class="title-highlight">Impulsionam Seu Negócio</span></h1>
             
             <p class="hero-description">
-                Consultoria estratégica personalizada para proteger seu negócio, garantir compliance e maximizar resultados. Atendimento nômade em todo Brasil com metodologia exclusiva.
+                Consultoria estratégica personalizada para <strong>proteger seu negócio</strong>, garantir compliance e 
+                <strong>maximizar resultados</strong>. Atendimento nômade em <strong>todo o Brasil</strong> com metodologia exclusiva.
             </p>
 
-            <!-- Stats - 4 na mesma linha -->
             <div class="consulting-stats">
                 <div class="stat-card">
-                    <div class="stat-number">48+</div>
+                    <div class="stat-number" data-count="48">0</div>
                     <div class="stat-label">Diagnóstico Express</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">98%</div>
+                    <div class="stat-number" data-count="98">0</div>
                     <div class="stat-label">Clientes Satisfeitos</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">2M+</div>
-                    <div class="stat-label">Multas Evitadas</div>
+                    <div class="stat-number" data-count="2">0</div>
+                    <div class="stat-label">Milhões em Multas Evitadas</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">24/7</div>
+                    <div class="stat-number" data-count="24">0</div>
                     <div class="stat-label">Suporte Prioritário</div>
                 </div>
             </div>
 
-            <!-- Botões Centralizados -->
             <div class="hero-actions">
                 <a href="#packages" class="btn btn-primary">
                     <span>Ver Planos de Consultoria</span>
@@ -293,7 +781,124 @@
         </div>
     </section>
 
-    <!-- Process Section Corrigido -->
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Planos de Consultoria</h2>
+                <p class="section-subtitle">Escolha a solução ideal para o momento do seu negócio</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Plano Express -->
+                <div class="package-card">
+                    <div class="package-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Consultoria Express</h3>
+                    <p>Solução rápida para urgências jurídicas</p>
+                    
+                    <div class="package-price">
+                        R$ 1.497
+                        <span class="period">/único</span>
+                    </div>
+
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Diagnóstico LGPD em 48h</li>
+                        <li><i class="fas fa-check"></i> 2 Sessões de Mentoria</li>
+                        <li><i class="fas fa-check"></i> Plano de Ação Prioritário</li>
+                        <li><i class="fas fa-check"></i> Checklist Compliance</li>
+                        <li><i class="fas fa-check"></i> Suporte 15 dias</li>
+                    </ul>
+
+                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Express por R$ 1.497" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                        <span>Contratar Agora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Plano Estratégico (Featured) -->
+                <div class="package-card featured">
+                    <div class="package-badge">MAIS POPULAR</div>
+                    <div class="package-icon">
+                        <i class="fas fa-chess-queen"></i>
+                    </div>
+                    <h3>Consultoria Estratégica</h3>
+                    <p>Proteção jurídica completa para crescimento</p>
+                    
+                    <div class="package-price">
+                        R$ 3.997
+                        <span class="period">/único</span>
+                    </div>
+
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Análise Empresarial Completa</li>
+                        <li><i class="fas fa-check"></i> Planejamento Jurídico 6 meses</li>
+                        <li><i class="fas fa-check"></i> 4 Sessões Mensais</li>
+                        <li><i class="fas fa-check"></i> Revisão de Contratos</li>
+                        <li><i class="fas fa-check"></i> Políticas Personalizadas</li>
+                        <li><i class="fas fa-check"></i> Suporte 60 dias</li>
+                    </ul>
+
+                    <a href="https://wa.me/5571996510966?text=Quero a Consultoria Estratégica por R$ 3.997" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                        <span>Contratar Agora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Plano Contínuo -->
+                <div class="package-card">
+                    <div class="package-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Compliance Contínuo</h3>
+                    <p>Proteção jurídica mensal sem preocupações</p>
+                    
+                    <div class="package-price">
+                        R$ 997
+                        <span class="period">/mês</span>
+                    </div>
+
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Suporte Jurídico Ilimitado</li>
+                        <li><i class="fas fa-check"></i> DPO Terceirizado</li>
+                        <li><i class="fas fa-check"></i> Revisão de Documentos</li>
+                        <li><i class="fas fa-check"></i> Atualização Legislativa</li>
+                        <li><i class="fas fa-check"></i> Relatórios Mensais</li>
+                        <li><i class="fas fa-check"></i> Consultoria 24/7</li>
+                    </ul>
+
+                    <a href="https://wa.me/5571996510966?text=Quero o Plano Compliance Contínuo por R$ 997/mês" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                        <span>Contratar Agora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="guarantee-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Banner -->
+    <section class="urgency-section">
+        <div class="container">
+            <div class="urgency-banner">
+                <h3>⚠️ LGPD: O Prazo Está Acabando!</h3>
+                <p>Multas da ANPD já estão sendo aplicadas. Proteja seu negócio antes que seja tarde demais.</p>
+                <a href="https://wa.me/5571996510966?text=URGENTE! Preciso de ajuda com LGPD agora!" class="btn btn-primary" target="_blank">
+                    <span>Consultoria LGPD Urgente</span>
+                    <i class="fas fa-exclamation-triangle"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
     <section class="process-section">
         <div class="container">
             <div class="section-header">
@@ -305,34 +910,275 @@
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <h3>Diagnóstico Completo</h3>
-                    <p>Análise detalhada da situação jurídica atual do seu negócio</p>
+                    <p>Análise detalhada da situação jurídica atual do seu negócio com identificação de riscos e oportunidades</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3>Plano Estratégico</h3>
-                    <p>Desenvolvimento de roadmap personalizado com prioridades claras</p>
+                    <p>Desenvolvimento de roadmap personalizado com prioridades claras e cronograma executivo</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Implementação</h3>
-                    <p>Execução das ações com acompanhamento próximo e suporte total</p>
+                    <p>Execução das ações com acompanhamento próximo e suporte total para garantir resultados</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Resultados Mensuráveis</h3>
-                    <p>Acompanhamento de KPIs e ajustes estratégicos contínuos</p>
+                    <p>Acompanhamento de KPIs jurídicos e ajustes estratégicos contínuos para otimização</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resto do seu conteúdo existente -->
-    <!-- Packages Section, Urgency Banner, FAQ, Footer, etc. -->
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compare os Planos</h2>
+                <p class="section-subtitle">Escolha a solução perfeita para suas necessidades</p>
+            </div>
 
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="feature-name">Recursos Incluídos</th>
+                        <th>Express</th>
+                        <th>Estratégica</th>
+                        <th>Contínuo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-name">Diagnóstico LGPD Completo</td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Sessões de Mentoria</td>
+                        <td>2 sessões</td>
+                        <td>4 sessões</td>
+                        <td>Ilimitado</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Revisão de Contratos</td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td>Até 5 contratos</td>
+                        <td>Ilimitado</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Políticas Personalizadas</td>
+                        <td>Básicas</td>
+                        <td>Completas</td>
+                        <td>Completas + Atualizações</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">DPO Terceirizado</td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Suporte por WhatsApp</td>
+                        <td>15 dias</td>
+                        <td>60 dias</td>
+                        <td>Ilimitado</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Relatórios de Compliance</td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td>Mensal</td>
+                        <td>Mensal Detalhado</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Atualização Legislativa</td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td><i class="fas fa-times cross-mark"></i></td>
+                        <td><i class="fas fa-check check-mark"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Tire suas dúvidas sobre nossa consultoria</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        Qual o prazo para início da consultoria?
+                    </div>
+                    <p>Iniciamos em até 24 horas após a contratação. Para casos de urgência, podemos começar no mesmo dia.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        A consultoria é presencial ou remota?
+                    </div>
+                    <p>Oferecemos ambas as modalidades. Atendimento remoto para todo Brasil e presencial nas principais capitais.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        Posso cancelar a qualquer momento?
+                    </div>
+                    <p>Sim! Oferecemos garantia de 7 dias. Para planos mensais, cancelamento sem multa com 30 dias de aviso.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        Vocês emitem nota fiscal?
+                    </div>
+                    <p>Sim, emitimos nota fiscal de serviço para todas as consultorias, ideal para dedução fiscal da empresa.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        E se eu tiver uma emergência fora do horário comercial?
+                    </div>
+                    <p>No plano Contínuo oferecemos suporte 24/7. Nos outros planos, emergências são atendidas com taxa adicional.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="far fa-question-circle"></i>
+                        Vocês atendem empresas de qualquer segmento?
+                    </div>
+                    <p>Sim! Atendemos desde startups até grandes corporações, com especialização em e-commerce, tech e serviços.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pronto para Transformar Seu Negócio?</h2>
+                <p class="section-subtitle">Agende uma consultoria estratégica sem compromisso</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://wa.me/5571996510966?text=Olá! Gostaria de agendar uma consultoria estratégica." class="btn btn-primary" style="margin: 0.5rem;" target="_blank">
+                    <span>WhatsApp Rápido</span>
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="index.html#contact" class="btn btn-secondary" style="margin: 0.5rem; background: transparent; color: white; border: 2px solid white;">
+                    <span>Formulário de Contato</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="opacity: 0.9; color: white; font-weight: 500;"><strong>⚠️ Vagas Limitadas:</strong> Apenas 5 consultorias por mês para garantir qualidade máxima</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Dr.Reginaldo</span>
+                    </div>
+                    <p>Excelência em advocacia empresarial estratégica</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navegação</h4>
+                        <a href="index.html">Início</a>
+                        <a href="index.html#about">Sobre</a>
+                        <a href="index.html#services">Serviços</a>
+                        <a href="index.html#contact">Contato</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Serviços</h4>
+                        <a href="index.html#services">Direito Empresarial</a>
+                        <a href="index.html#services">Compliance Digital</a>
+                        <a href="index.html#services">Contratos</a>
+                        <a href="index.html#services">LGPD</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="politica-privacidade.html">Política de Privacidade</a>
+                        <a href="termos-uso.html">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Reginaldo - Advogado. Todos os direitos reservados.</p>
+                <p>OAB/SC 57.879</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5571996510966?text=Olá! Gostaria de mais informações sobre consultoria jurídica." class="whatsapp-float" target="_blank" title="Fale comigo no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
     <script>
-        // Script simples para animação dos números (opcional)
         document.addEventListener('DOMContentLoaded', function() {
-            // Seu script existente
+            // Animação dos números
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            const animateNumbers = () => {
+                statNumbers.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-count'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        
+                        if (target === 2) {
+                            stat.textContent = "2M+";
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = Math.floor(current) + (target === 98 ? '%' : '+');
+                        }
+                    }, 16);
+                });
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateNumbers();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(document.querySelector('.consulting-stats'));
         });
     </script>
 </body>
